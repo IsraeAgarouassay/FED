@@ -39,12 +39,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://www.adidas.nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="homepagina Adidas site">
+  Adidas home pagina 
+  <img src="readme-images/homepagina-adidas.png" width="375px" alt="homepagina Adidas site">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/productpagina-adidas.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
