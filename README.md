@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Adidas home pagina 
-  <img src="readme-images/homepagina-adidas.png" width="375px" alt="homepagina Adidas site">
+  <img src="readme-images/homepage-adidas.jpg" width="375px" alt="homepagina Adidas site">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/productpagina-adidas.png" width="375px" alt="omschrijving van de pagina">
+  Adidas product pagina  
+  <img src="readme-images/productpage-adidas.jpg" width="375px" alt="productpagina Adidas site">
  
 </details>
 
@@ -56,8 +56,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  Lijst met je bevindingen die tijdens screenreader naar voren kwamen:
 
+Home pagina
+- Alles word twee keer benoemd
+- Als je op bijvoorbeeld een schoen klikt benoemt die alles wat er staat maar ook veel extra onrelevante informatie zoals: kop niveau 4. Het is onduidelijk wat daarmee word bedoeld.
+- De screenreader leest niet alles op pas als je erop klikt en sommige delen helemaal niet zoals kortingen en kopjes zoals: heren, dames en kids.
+- De reader Benoemt kopjes eerst door bijvoorbeeld te zeggen: kop niveau 2 en dan de resterende tekst.
+- Afbeelding beschrijving zijn grote Deels duidelijk maar er word niet verteld waar je naar toe word geleid als je erop klikt
+- Knoppen worden duidelijk benoemd en zijn daarbij toegankelijk.
+- Over het algemeen wordt er veel extra informatie benoemd en wordt er maar kort toegelicht waar daadwerkelijk op wordt geklikt.
+
+
+Product pagina
+- Als je op andere kleur (optie schoen) klikt wordt dit niet benoemd en wordt er enkel andere onnodige informatie benoemd.
+- Knoppen worden duidelijk benoemd 
+- Bij de uitklap vensters word benoemd dat ze worden uitgevouwen enzovoort ,maar niet wat er in staat
+- Andere bevindingen komen overeen met de bevindingen op de home pagina.
 </details>
 
 
