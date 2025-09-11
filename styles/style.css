@@ -29,3 +29,18 @@
 
 /* jouw code */
 
+/* Nav */
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 2em;
+	
+}
+
+nav ul li a {
+	text-decoration: none;
+}
+
+/* hamburger menu*/
+
+
