@@ -90,10 +90,10 @@ Product pagina
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
    
   ### de hele pagina: 
-  <img src="readme-images/breakdown-schets-homepagina.png.png" width="375px" alt="breakdown van de home pagina">
+  <img src="readme-images/breakdown-schets-homepagina.png" width="375px" alt="breakdown van de home pagina">
 
   ### de tweede pagina: 
-  <img src="readme-images/breakdown-schets-productpagina.png.png" width="375px" alt="breakdown van de product pagina">
+  <img src="readme-images/breakdown-schets-productpagina.png" width="375px" alt="breakdown van de product pagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
