@@ -73,6 +73,13 @@ Product pagina
 - Knoppen worden duidelijk benoemd 
 - Bij de uitklap vensters word benoemd dat ze worden uitgevouwen enzovoort ,maar niet wat er in staat
 - Andere bevindingen komen overeen met de bevindingen op de home pagina.
+
+ ### screenshots tijdens de test: 
+  <img src="readme-images/korting-verkrijgen.png" width="375px" alt="korting die niet word benoemd">
+ 
+  <img src="readme-images/dropdown.png" width="375px" alt="uitgeklapte dropdown">
+
+  <img src="readme-images/productomschrijving.png" width="375px" alt="product omschrijving">
 </details>
 
 
@@ -83,13 +90,13 @@ Product pagina
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
    
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown-schets-homepagina.png.png" width="375px" alt="breakdown van de home pagina">
+
+  ### de tweede pagina: 
+  <img src="readme-images/breakdown-schets-productpagina.png.png" width="375px" alt="breakdown van de product pagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -104,6 +111,14 @@ Product pagina
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+  Wat goed ging was het maken van de breakdown schets. Verder ging het coderen van de header moeizaam en is het eigenlijk nog niet gelukt.
+
+  ### foto van wat lastig is: 
+  <img src="readme-images/header.png" width="375px" alt="header in AVG secure browser">
+
+  ### foto van code van de header: 
+  <img src="readme-images/code-header.png" width="375px" alt="code van de header">
 
 
   ### Agenda voor meeting
