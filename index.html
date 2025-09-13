@@ -7,55 +7,92 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Howdy FED2526</title>
-	
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
 <body>
 
+	
+	<header>
+		<!-- eenvoudige hamburger -->
+		<button aria-hidden="true">☰ Menu</button>
+	 
 
-<header>
-
-	<section>
-		<p>Gratis retourneren en omruilen</p>
-	  </section>
-
-<nav>
-<ul>
-	  <li><button>☰</button></li>   <!-- hamburger -->
-      <li><a href="/wishlist">♡</a></li> <!-- wishlist -->
-
-      <li>
-        <a href=".">
-          <img src="images/adidas-logo.png" alt="adidas logo"> 
-        </a>
-      </li> <!-- logo -->
-
-      <li><a href="/account">👤</a></li> <!-- account -->
-      <li><a href="/zoeken">🔍</a></li> <!-- zoeken -->
-      <li><a href="/winkelwagen">🛒</a></li>   <!-- winkelwagen -->
-	</li>
-</ul>
-</nav>
-</header>
+		<nav>
+		  <!-- LOGO (midden) + sluitknop (rechtsboven) -->
+		  <img src="images/adidas-logo.png" alt="adidas logo">
+		  <button aria-hidden="true">✕</button>
+	  
+		  <!-- hoofdmenu -->
+		  <ul>
+			<li><button>HEREN</button></li>
+			<li><a href="#">DAMES</a></li>
+			<li><a href="#">KINDEREN</a></li>
+			<li><a href="#">SCHOENEN</a></li>
+			<li><a href="#">KLEDING</a></li>
+			<li><a href="#">SPORTEN</a></li>
+			<li><a href="#">OUTLET</a></li>
+		  </ul>
+	  
+		  <!-- klikbare links onder elkaar -->
+		  <ul>
+			<li><a href="#">Bestellingsstatus</a></li>
+			<li><a href="#">Account</a></li>
+			<li><a href="#">Store Finder</a></li>
+			<li><a href="#">Hulp</a></li>
+		  </ul>
+	  
+		  <!-- p is ALLEEN zichtbaar op hoofdmenu -->
+		  <p>adiClub-leden: Gratis verzending op alle bestellingen. Makkelijk retourneren &amp; omruilen voor iedereen.</p>
+	  
+		  <!-- submenu 2: HEREN -->
+		  <ul hidden>
+			<li><button>← Terug</button></li>
+			<li><button>Schoenen</button></li>
+			<li><a href="#">Kleding</a></li>
+			<li><a href="#">Accessoires</a></li>
+			<li><a href="#">Sporten</a></li>
+			<li><a href="#">Merken</a></li>
+		  </ul>
+	  
+		  <!-- submenu 3: HEREN → SCHOENEN (enkel deze sub werkt) -->
+		  <ul hidden>
+			<li><button>← Terug</button></li>
+			<li><a href="#">Sneakers</a></li>
+			<li><a href="#">Fitness en Training</a></li>
+			<li><a href="#">Voetbalschoenen</a></li>
+			<li><a href="#">Hardlopen</a></li>
+			<li><a href="#">Wandelsport &amp; Outdoor</a></li>
+			<li><a href="#">Bad- en teenslippers</a></li>
+			<li><a href="#">Golf</a></li>
+			<li><a href="#">Sneakers onder €80</a></li>
+		  </ul>
+		</nav>
+	  </header>
 
 <main>
 
-	<!-- eerste section onder nav-->
+	<!-- 1e section onder nav-->
 <section>
 	<img src="images/eerste-foto-homepagina.jpeg" alt="home pagina foto">
 
 	<h1>Back in the game</h1>
-	<p>Veld,baan,gym of track. Maak een comback in sportieve looks die je de hele dag energie geven</p>
+	<p>Veld,baan,gym of track. Maak een comback in</p>
+	<p>sportieve looks die je de hele dag energie geven</p>
 
-	<a href="https://www.adidas.nl/heren-superstar">Shop Heren</a>
-	<a href="https://www.adidas.nl/dames-superstar"> Shop Dames</a>
-	<a href="https://www.adidas.nl/kinderen-sneakers"> Shop Kids</a>
+	<div>
+	<a href="https://www.adidas.nl/heren-superstar">Shop Heren →</a>
+	<a href="https://www.adidas.nl/dames-superstar"> Shop Dames →</a>
+	<a href="https://www.adidas.nl/kinderen-sneakers"> Shop Kids →</a>
+    </div>
+
 </section>
 
 
-<!-- tweede section categorie kiezen-->
+<!-- 2e section categorie kiezen-->
 <section>
 
 <h2>Gear up. Head outdoors.</h2>
@@ -87,29 +124,30 @@
 			<img src="images/accessoires.jpg" alt="accessiores foto">
 			<p>accessoires</p>
 		</a>
-	</li>
+	</li>	
 
 
 </ul>
 </section>
 
-<!-- derde section foto met buttons heren/dames -->
+<!-- 3e section foto met buttons heren/dames -->
 <section>
 	<img src="images/megarida.jpg" alt="megarida foto">
 
 
   <h2>Megaride</h2>
   <p>Vis-tach energie.</p>
-
+  
+<div>
   <a href="https://www.adidas.nl/heren-superstar">Shop heren →</a>
   <a href="https://www.adidas.nl/dames-superstar">Shop dames →</a>
-
+</div>
 </section>
 
 
 
 
-<!-- vierde section 2e keer categorie kiezen -->
+<!-- 4e section 2e keer categorie kiezen -->
 <section>
 	<h2>Ontdek nieuwe items</h2>
   
@@ -144,15 +182,15 @@
 	</ul>
   </section>
   
+  
+<!-- 5e section 1e productenlijst -->	  
+<!-- geen nav maar ul met buttons -->
 <section>
-
-<!-- vijfde section 1e productenlijst -->	  
-
-<nav>
+<ul>
     <button>Exclusief voor leden</button>
     <button>Nieuwe producten</button>
     <button>Binnenkort verkrijgbaar</button>
-</nav>
+</ul>
 
 
 <ul>
@@ -200,52 +238,58 @@
 </ul>
 
 <!-- alles bekijken knop -->
-<a href="#">Alles bekijken</a>
+<a href="https://www.adidas.nl/nieuw_binnen">Alles bekijken</a>
  
 <!-- tweede productenlijst die verborgen wordt met css -->	 
 <ul hidden>
 	<li>
-	  <a href="#">
-		<img src="#" alt="">
+	  <a href="https://www.adidas.nl/handball-spezial-comfort-closure-schoenen-met-elastische-veters-kids/KI3944.html?pr=taxonomy_rr&slot=1&rec=mt">
+		<img src="images/campus-taupe.jpg" alt="adidas campus taupe">
 	  </a>
 	  <button>♡</button>
 	</li>
+
 	<li>
-	  <a href="#">
-		<img src="#" alt="">
+	  <a href="https://www.adidas.nl/handball-spezial-schoenen-kids/KI3943.html?pr=taxonomy_rr&slot=2&rec=mt">
+		<img src="images/spezial-bruin-schoen.jpg" alt="adidas spezial bruin kids">
 	  </a>
 	  <button>♡</button>
 	</li>
+
 	<li>
-	  <a href="#">
-		<img src="#" alt="">
+	  <a href="https://www.adidas.nl/handball-spezial-schoenen-kids/JP8021.html?pr=taxonomy_rr&slot=3&rec=mt">
+		<img src="images/spezial-bordeaux-schoen.jpg" alt="adidas spezial bordeaux">
 	  </a>
 	  <button>♡</button>
 	</li>
+
 	<li>
-	  <a href="#">
-		<img src="#" alt="">
+	  <a href="https://www.adidas.nl/superstar-ii-sneakers/JS4009.html?pr=taxonomy_rr&slot=4&rec=mt">
+		<img src="images/zwarte-sneakers.jpg" alt="zwarte adidas sneakers">
 	  </a>
 	  <button>♡</button>
 	</li>
+
 	<li>
-	  <a href="#">
-		<img src="#" alt="">
+	  <a href="https://www.adidas.nl/vl-court-3.0-schoenen/JS2046.html?pr=taxonomy_rr&slot=5&rec=mt">
+		<img src="images/beige-zwarte-strepen-schoen.jpg" alt="beige adidas met zwarte strepen">
 	  </a>
 	  <button>♡</button>
 	</li>
+
 	<li>
-	  <a href="#">
-		<img src="#" alt="">
+	  <a href="https://www.adidas.nl/campus-00s-winter-mid-schoenen/JR3735.html?pr=taxonomy_rr&slot=6&rec=mt">
+		<img src="images/beige-campus-winter.jpg" alt="winterse beige adidas campus">
 	  </a>
 	  <button>♡</button>
 	</li>
+
   </ul>
 
 </section>
 
 
-<!-- scrolbar bekendheden -->	 
+<!-- 6e section scrolbar bekendheden -->	 
 <section>
 <ul>
 <li>
@@ -305,8 +349,8 @@
 </ul>
 </section>
 
-<!-- adidas apps -->	 
-<sectio>
+<!-- 7e section adidas apps -->	 
+<section>
 <h2>DOWNLOAD ONZE APPS</h2>
 
 <ul>
@@ -337,7 +381,7 @@
 
 </section>
 
-<!-- dropdowns -->	 
+<!-- 8e dropdowns -->	 
 
 <section>
   
@@ -367,8 +411,9 @@
 
   </section>
   
-<!-- artikel -->	
-<article>
+<!-- 9e section artikel -->	
+
+<section>
 
 <h2>ADIDAS SPORTWINKEL VOOR PERFORMANCE, STIJL & INNOVATIE - SINDS 1949</h2>
 
@@ -380,7 +425,13 @@
 
 <img src="images/adidas-logo.png" alt="logo adidas">
 
-</article> 
+</section> 
+
+<!-- 10e section jouw mening kader-->
+<section>
+    <h2>JOUW MEING TELT!</h2>
+    <p>We streven ernaar om je nog beter van dienst te zijn en stellen je feedback zeer op prijs.</p>
+</section>
 
 </main>
 
@@ -392,7 +443,7 @@
 		<a href="https://www.adidas.nl/cart">Winkelwagen</a>
 	  </nav>
 
-<!-- lid worden-->
+<!-- 11e section lid worden-->
 	<section>
 		<h2>Word lid en krijg 10% korting*</h2>
 		<a href="#">Meld je gratis aan →</a>
@@ -416,7 +467,7 @@
 </ul>
 </nav>
 
-<!-- Disclaimers in kleine lettertjes -->
+<!-- 12e section Disclaimers in kleine lettertjes -->
 <section>
 <p>
 Kortingsvouchers kunnen worden gebruikt voor een groot aantal van je favoriete adidas-artikelen;
@@ -426,7 +477,7 @@ https://www.adidas.com/om/en/selected_items voor uitgesloten items.
 </section>
 
 
-<!-- beleid -->
+<!-- 13e section beleid -->
 <section>
 <button>Cookie-instellingen</button>
 <button>Beheer gegevens</button>

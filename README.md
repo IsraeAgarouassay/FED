@@ -101,9 +101,6 @@ Product pagina
 </details>
 
 
-
-
-
 ## Voortgang 1 (week 2)
 
 <details>

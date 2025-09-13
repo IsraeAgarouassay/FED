@@ -16,9 +16,8 @@
 
     <header>
     
-        <section>
             <p>Gratis retourneren en omruilen</p>
-        </section>
+   
     
     <nav>
     <ul>
@@ -46,7 +45,7 @@
         <a href="https://www.adidas.nl/search?q=running">Running</a> 
     </p>
 
-<!-- eerste schoen die word weergeven-->
+<!-- 1e section/ eerste schoen die word weergeven-->
 <section>
     <h1>ADISTAR CONTROL 5 SCHOENEN</h1>
     <H2>€120</H2>
@@ -66,62 +65,66 @@
 </section>
 
 
-<!-- kiezen van andere schoen soort-->
-<section>
-    <h2>Kleuren</h2>
-<ul>
+<!-- form kiezen van andere schoen soort en maat-->
+<form>
 
-  <li>
-    <button>
-      <img src="images/schoen-keuze1-blauw.jpg" alt="blauwe schoen">
-    </button>
-  </li>
-
-  <li>
-    <button>
-      <img src="images/schoen-keuze2-zwart.jpg" alt="zwarte schoen">
-    </button>
-</li>
-
-  <li>
-    <button>
-      <img src="images/schoen-keuze3-zilver.jpg" alt="zilvere schoen">
-    </button>
-  </li>
-</ul>
-
-<p>Silver Metallic / Grey One / Core Black / Blue</p>
-<p>Dit artikel is uitgezonderd van deelname aan acties, kortingen en andere aanbiedingen.</p>
-</section>
-
-<section>
-    <h2>Maten</h2>
-
-    <ol>
-    <li><button>35 ½</button></li>
-    <li><button>36</button></li>
-    <li><button>36 ⅔</button></li>
-    <li><button>37 ⅓</button></li>
-    <li><button>38</button></li>
-    <li><button>38 ⅔</button></li>
-    <li><button>39 ⅓</button></li>
-    <li><button>40</button></li>
-    <li><button>40 ⅔</button></li>
-    <li><button>41 ⅓</button></li>
-    <li><button>42 ⅔</button></li>
-    <li><button>43 ⅓</button></li>
-    <li><button>44</button></li>
-    <li><button>44 ⅔</button></li>
-    <li><button>45 ⅓</button></li>
-    <li><button>46</button></li>
-    <li><button>46 ⅔</button></li>
-    <li><button>47 ⅓</button></li>
-    <li><button>48</button></li>
-    </ol>
-
-    <p>Valt normaal. We raden je aan om je gebruikelijke maat te bestellen.</p> <!-- hier moet later een kader omheen -->
-</section>
-
+    <!-- Kleuren -->
+    <fieldset>
+      <legend>Kleuren</legend>
+      <ul>
+        <li>
+          <label>
+            <input type="radio" name="kleur" value="blauw">
+            <img src="images/schoen-keuze1-blauw.jpg" alt="blauwe schoen">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="kleur" value="zwart">
+            <img src="images/schoen-keuze2-zwart.jpg" alt="zwarte schoen">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="kleur" value="zilver">
+            <img src="images/schoen-keuze3-zilver.jpg" alt="zilvere schoen">
+          </label>
+        </li>
+      </ul>
+      <p>Silver Metallic / Grey One / Core Black / Blue</p>
+      <p>Dit artikel is uitgezonderd van deelname aan acties, kortingen en andere aanbiedingen.</p>
+    </fieldset>
+  
+    <!-- Maten -->
+    <fieldset>
+      <legend>Maten</legend>
+      <ul>
+        <li><label><input type="radio" name="maat" value="35 ½">35 ½</label></li>
+        <li><label><input type="radio" name="maat" value="36">36</label></li>
+        <li><label><input type="radio" name="maat" value="36 ⅔">36 ⅔</label></li>
+        <li><label><input type="radio" name="maat" value="37 ⅓">37 ⅓</label></li>
+        <li><label><input type="radio" name="maat" value="38">38</label></li>
+        <li><label><input type="radio" name="maat" value="38 ⅔">38 ⅔</label></li>
+        <li><label><input type="radio" name="maat" value="39 ⅓">39 ⅓</label></li>
+        <li><label><input type="radio" name="maat" value="40">40</label></li>
+        <li><label><input type="radio" name="maat" value="40 ⅔">40 ⅔</label></li>
+        <li><label><input type="radio" name="maat" value="41 ⅓">41 ⅓</label></li>
+        <li><label><input type="radio" name="maat" value="42 ⅔">42 ⅔</label></li>
+        <li><label><input type="radio" name="maat" value="43 ⅓">43 ⅓</label></li>
+        <li><label><input type="radio" name="maat" value="44">44</label></li>
+        <li><label><input type="radio" name="maat" value="44 ⅔">44 ⅔</label></li>
+        <li><label><input type="radio" name="maat" value="45 ⅓">45 ⅓</label></li>
+        <li><label><input type="radio" name="maat" value="46">46</label></li>
+        <li><label><input type="radio" name="maat" value="46 ⅔">46 ⅔</label></li>
+        <li><label><input type="radio" name="maat" value="47 ⅓">47 ⅓</label></li>
+        <li><label><input type="radio" name="maat" value="48">48</label></li>
+      </ul>
+      <p>Valt normaal. We raden je aan om je gebruikelijke maat te bestellen.</p>
+    </fieldset>
+  
+  </form>
+  
+   <!-- 2e section maar kiezen + wishlist-->
 <section>
     <!-- grote zwarte knop en hartje-knop -->
     <button>Kies maat →</button>
@@ -134,7 +137,7 @@
     </p>
   </section>
   
-
+   <!-- 3e section bezorg info-->
   <section>
     <!-- bezorging pop up -->
     <button>⟳ Bezorgdata ophalen</button>
@@ -147,9 +150,10 @@
   </section>
   
 
- <!-- dropdowns -->
+ <!-- 4e section dropdowns -->
   <section>
   
+    <!-- moeilijk te stijlen dus probeer zo goed mogelijk -->
 	<details>
 	  <summary>Beschrijving</summary>
       <h2>DE Y2K HARDLOOPSTIJL LEEFT VOORT IN DEZE LIFESTYLE SNEAKERS.</h2>
@@ -172,7 +176,8 @@
   
 </section>
 
-<!-- lijstje met looks voorstellen -->
+<!-- 5e section lijstje met looks voorstellen -->
+ <!-- article maken als kan -->
 <section>
     <h2>MAAK JE LOOK HELEMAAL</h2>
   
@@ -215,7 +220,7 @@
     </ul>
   </section>
   
-<!-- lijstje met meschien vind je dit ook leuk -->
+<!-- 6e section lijstje met meschien vind je dit ook leuk -->
 
 <section>
     <h2>MESCHIEN VIND JE DIT OOK LEUK</h2>
@@ -224,52 +229,51 @@
       <li>
         <a href="https://www.adidas.nl/predator-megaride-schoenen/JS1555.html?pr=product_rr&slot=1&rec=ds">
           <img src="images/grijze schoen.jpg" alt="grijze schoen">
-          <p></p>
-          <h3></h3>
-          <p></p>
+          <h3> €180</h3>
+          <p>Predator Megaride Schoenen</p>
+          <p>Sportwear</p>
         </a>
       </li>
   
       <li>
         <a href="https://www.adidas.nl/tyshawn-ii-x-zach/JQ1620.html?pr=product_rr&slot=2&rec=ds">
           <img src="images/wit-bruine-schoen.jpg" alt="witte schoen met bruine strepen">
-          <p></p>
-          <h3></h3>
-          <p></p>
+          <h3> €100</h3>
+          <p>Tyshawn II X Zach</p>
+          <p>Originals</p>
         </a>
       </li>
 
       <li>
         <a href="https://www.adidas.nl/samba-xlg-schoenen/IE1377.html?pr=product_rr&slot=8&rec=ds">
           <img src="images/zwarte-samba.jpg" alt="zwarte samba">
-          <p></p>
-          <h3></h3>
-          <p></p>
+          <h3> €130</h3>
+          <p>Samba XLG Schoenen</p>
+          <p>Originals</p>
         </a>
       </li>
-    </ul>
 
     <li>
         <a href="https://www.adidas.nl/adistar-control-5-schoenen/JQ4168.html">
           <img src="images/grijs-witte-schoen.jpg" alt="grijs met witte schoen">
-          <p></p>
-          <h3></h3>
-          <p></p>
+          <h3> €120</h3>
+          <p>Adistar Control 5 Schoenen</p>
+          <p>Originals</p>
         </a>
       </li>
 
       <li>
         <a href="https://www.adidas.nl/forum-low-classic-schoenen/ID6858.html?pr=product_rr&slot=4&rec=ds">
           <img src="images/witte-schoen (2).jpg" alt="witte schoen">
-          <p></p>
-          <h3></h3>
-          <p></p>
+          <h3> €120</h3>
+          <p>Forum Low Classic Schoenen</p>
+          <p>Originals</p>
         </a>
       </li>
-
+    </ul>
   </section>
   
-<!-- jouw mening kader-->
+<!-- 7e section jouw mening kader-->
 <section>
     <h2>JOUW MEING TELT!</h2>
     <p>We streven ernaar om je nog beter van dienst te zijn en stellen je feedback zeer op prijs.</p>
@@ -285,7 +289,7 @@
             <a href="https://www.adidas.nl/cart">Winkelwagen</a>
           </nav>
 
-<!-- lid worden-->
+<!-- 8e section lid worden-->
         <section>
             <h2>Word lid en krijg 10% korting*</h2>
             <a href="#">Meld je gratis aan →</a>
@@ -309,7 +313,7 @@
     </ul>
   </nav>
 
-<!-- Disclaimers in kleine lettertjes -->
+<!-- 9e section Disclaimers in kleine lettertjes -->
  <section>
 <p>
     Kortingsvouchers kunnen worden gebruikt voor een groot aantal van je favoriete adidas-artikelen;
@@ -319,7 +323,7 @@
 </section>
 
 
-  <!-- beleid -->
+  <!-- 10e section beleid -->
 <section>
     <button>Cookie-instellingen</button>
     <button>Beheer gegevens</button>

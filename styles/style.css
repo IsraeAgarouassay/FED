@@ -1,11 +1,15 @@
-/**************/
+************
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;  
 }
 
-
+html, body {
+	margin: 0;
+	padding: 0;
+  }
+  
 
 
 
@@ -17,30 +21,390 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--color-lines:#111;
+
+	--menu-padding: 1em 0.5em;
+
+	--link-decoration: none;
+
+
+
+}
+
+img {
+	width: 50%;
 }
 
 
 
+/*********************/
+/* HAMBURGER MENU */
+/*********************/
 
+nav img {
+display: block;
+width:18%;
+margin: 0 auto;
+}
 
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
-
-/* Nav */
-nav ul {
-	display: flex;
-	list-style: none;
-	gap: 2em;
+header {
+	display:flex;
+	position:sticky;
+	padding: var(--menu-padding);
+  }
+  
+  
+  /* MENU knop */
+  header button {
+	order:-1;
+	font:inherit;
+	background:none;
+	border: 0;
 	
-}
+  }
 
-nav ul li a {
+  /* sluitknop rechtsboven */
+nav > button {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	font-size: 1.5em;
+  }
+
+  /* hoofdmenu*/
+  nav {
+	position:fixed;
+	overflow-y: auto;   
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+  
+	background:#fff;
+	
+	translate:-100% 0%;
+	transition:translate .3s;
+  }
+  
+  /* als menu open is */
+  nav.toonMenu {
+	translate:0% 0%;
+  }
+  
+  nav ul {
+	list-style:none;
+  }
+
+  nav a {
+	display:block;
+	padding: var(--menu-padding);
+	text-decoration:none;
+	color:#111;
+  }
+  
+  nav p {
+	padding: 1em 1em;
+  }
+  
+
+
+
+
+/*********************/
+/* section 1 */
+/*********************/
+
+  /* de foto juist positioneren */
+section:first-of-type{
+	position: relative;
+	margin: 0 auto;
+  }
+
+
+section:first-of-type img{
+	display: block;
+	width: 87%;
+  }
+  
+
+/* h1 op de foto positioneren en stylen */
+  section:first-of-type h1 {
+	position: absolute;      /* legt hem bovenop de foto */
+	left: 0.3em;
+	bottom: 6.5em;              /* zodat hij hoog op de foto staat */
+    padding: 0.1em 0.3em;      /* ruimte tussen tekst en witruimte */
+
+	background: #fff;        
+	
+	text-transform: uppercase;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 1.2em;
+	font-weight: 400; 
+  }
+
+  /* p op de foto positioneren en stylen */
+  section:first-of-type p:nth-of-type(1) {
+	position: absolute;
+	left: 0.5em;
+	bottom: 9.8em; 
+	padding: 0.1em 0.4em;     
+	
+	width: 62%;          
+	display: block;
+  
+	background: #fff;
+  
+	font-family: sans-serif;
+	font-size: 0.7em;
+	font-weight: 400;
+  }
+  
+  
+section:first-of-type p:nth-of-type(2){
+	position: absolute;
+	left: 0.5em;
+	right: 0.5em;
+	bottom: 8em; 
+	padding: 0.2em 0.4em;
+	     
+	width: 65%;           
+	display: block;
+
+	background: #fff;
+  
+	font-family: sans-serif;
+	font-size: 0.7em;
+	font-weight: 400;
+  }
+
+/* knoppen op de foto positioneren en stylen*/
+
+section:first-of-type div {
+	position: absolute;
+	bottom: 4em;
+	
+	left: 41%;
+	transform: translateX(-50%);  /*wat houdt dit in */
+  
+	width: 80%;         /* totale rij smaller -> past op scherm */
+	display: flex;
+	gap: 0.3em;
+  }
+  
+  section:first-of-type div a {
+	flex: 1;                   /* verdeelt de ruimte gelijk over alle knoppen */
+	padding: 0.4em 0.3em;
+
+	border: 0.125em solid #111;
+	
+	background: #fff;
+	color: var(--color-text);
+	text-decoration: var(--link-decoration);
+
+	font-family: sans-serif;
+	font-size: 0.7em;
+	font-weight: 600;
+  }
+  
+
+
+  /*********************/
+/* section 2 /1e keer categorie kiezen */
+/*********************/
+
+  /* titel */
+  section:nth-of-type(2) h2{
+	margin-left: 1.2em;
+
+	letter-spacing: 0.09em;
+	font-weight: 700;
+
+	font-family: 'Bebas Neue', sans-serif; 
+	font-size: 1.7em;
+  }
+
+  /* lijst van 4 foto's in 2 kolommen */
+  section:nth-of-type(2) ul {
+	display: grid;
+	grid-template-columns:repeat(2, 1fr);
+	
+	list-style: none;
+
+	width: 87%; 
+	gap: 0.3em;
+
+	padding: 0;
+    margin-right: 2em !important;
+                   
+  }
+  
+  /* elke foto appart */
+  section:nth-of-type(2) li a {
+	display: block;              /*waar is dit voor*/
+	position: relative;         /*waar is dit voor*/
+
+	color:var(--color-text);
+  }
+  
+  /* foto vult hele tegel */
+  section:nth-of-type(2) li a img {
+	display: block;
+	width: 100%;
+	height: auto;
+  }
+  
+  /* label onderin de foto */
+  section:nth-of-type(2) li a p {
+	position: absolute;
+	left: 0.5em;
+	bottom: 0.5em;
+  
+	margin: 0;
+	padding: 0.2em 0.4em;
+	background: #fff;
+	
+    font-weight: 600;
+    font-size: 0.9em;
+    font-family: sans-serif;
+  }
+  
+
+  /*********************/
+/* section 3 */
+/*********************/
+section:nth-of-type(3){
+	position: relative;
+	margin: 0 auto;
+  }
+  
+  section:nth-of-type(3) img{
+	display: block;  /* nog na checken of dat echt nodig is*/
+	width: 87%;
+  }
+  
+  /* titel */
+  section:nth-of-type(3) h2{
+	position: absolute;
+
+	left: 0.3em;
+	bottom: 5.5em;
+	margin: 0;
+	padding: 0.1em 0.3em;
+  
+	background: #fff;
+	
+	letter-spacing: 0.08em; 
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 1.2em;
+	font-weight: 400;
+  }
+  
+  /* tekst */
+  section:nth-of-type(3) p{
+	position: absolute;
+	display: block;
+
+	left: 0.5em;
+	bottom: 7.6em;
+	padding: 0.1em 0.4em;
+	margin: 0;
+  
+	width: 25%;
+	background: #fff;
+  
+	font-family: sans-serif;
+	font-size: 0.7em;
+	font-weight: 400;
+  }
+  
+  /* knoppen-container */
+  section:nth-of-type(3) div{
+	position: absolute;
+	display: flex;
+
+	bottom: 2em;
+    left: 35%;
+	transform: translateX(-50%);   
+  
+	width: 67%;
+	gap: 0.3em;
+  }
+  
+  /* knoppen zelf */
+  section:nth-of-type(3) div a{
+	flex: 1;
+	padding: 0.4em 0.3em;
+  
+	border: 0.125em solid #111;
+	background: #fff;
+	color: #111;
 	text-decoration: none;
-}
+  
+	font-family: sans-serif;
+	font-size: 0.9em;
+	font-weight: 600;
+  }
+  
 
-/* hamburger menu*/
 
 
+
+/*********************/
+/* section 4 /2e keer categorie kiezen */
+/*********************/
+
+/* titel */
+section:nth-of-type(4) h2{
+	margin-left: 1.2em;
+  
+	letter-spacing: 0.09em;
+	font-weight: 700;
+  
+	font-family: 'Bebas Neue', sans-serif; 
+	font-size: 1.7em;
+  }
+  
+  /* lijst van 4 foto's in 2 kolommen */
+  section:nth-of-type(4) ul {
+	display: grid;
+	grid-template-columns:repeat(2, 1fr);
+	
+	list-style: none;
+  
+	width: 87%; 
+	gap: 0.3em;
+  
+	padding: 0;
+	margin-right: 2em !important;               
+  }
+  
+  /* elke foto apart */
+  section:nth-of-type(4) li a {
+	display: block;              /* maakt de hele tegel klikbaar */
+	position: relative;          /* anker voor het label (p) */
+  
+	color:var(--color-text);
+  }
+  
+  /* foto vult hele tegel */
+  section:nth-of-type(4) li a img {
+	display: block;
+	width: 100%;
+	height: auto;
+  }
+  
+  /* label onderin de foto */
+  section:nth-of-type(4) li a p {
+	position: absolute;
+	left: 0.5em;
+	bottom: 0.5em;
+  
+	margin: 0;
+	padding: 0.2em 0.4em;
+	background: #fff;
+  
+	font-weight: 600;
+	font-size: 0.9em;
+	font-family: sans-serif;
+  }
+  
