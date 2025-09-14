@@ -26,22 +26,13 @@ html, body {
 	--menu-padding: 1em 0.5em;
 
 	--link-decoration: none;
-
-
-
 }
 
 img {
-	width: 50%;
+	width: 100%;
 }
 
-p {
-font-size: 0.4em;
-}
 
-a {
-font-size: 0.2em;
-}
 
 /*********************/
 /* HAMBURGER MENU */
@@ -129,7 +120,7 @@ section:first-of-type{
 
 section:first-of-type img{
 	display: block;
-	width: 87%;
+	width: 94%;
   }
   
 
