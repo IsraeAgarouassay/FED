@@ -131,9 +131,9 @@ Product pagina
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Readme is goed ingevuld. Het toevoegen van foto's van de checklist tijdens testen zou het perfect maken.
+  - Html goed opgebouw. (hier en daar wat kleine aanpassingen).
+  - iconen moeten svg zijn
   - ...
 
 </details>
@@ -256,8 +256,8 @@ Product pagina
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
+  1. https://css-tricks.com/almanac/properties/t/text-indent/
+  2. https://css-tricks.com/almanac/properties/w/whitespace/
   3. ...
 
 </details>

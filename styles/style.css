@@ -20,7 +20,7 @@ html, body {
 :root {
 	/* startje */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-background:#fff;
 	--color-lines:#111;
 
 	--menu-padding: 1em 0.5em;
@@ -29,7 +29,7 @@ html, body {
 }
 
 img {
-	width: 50%;
+	width: 90%;
 }
 
 
@@ -120,7 +120,7 @@ section:first-of-type{
 
 section:first-of-type img{
 	display: block;
-	width: 90%;
+	width: 100%;
   }
   
 
@@ -210,10 +210,10 @@ section:first-of-type div {
 /*********************/
 
   /* titel */
-  section:nth-of-type(2) h2{
-	margin-left: 1.2em;
+  section:nth-of-type(2) h2 {
+	margin-left: 0.7em;
 
-	letter-spacing: 0.09em;
+	letter-spacing: 0.2em;
 	font-weight: 700;
 
 	font-family: 'Bebas Neue', sans-serif; 
@@ -227,11 +227,11 @@ section:first-of-type div {
 	
 	list-style: none;
 
-	width: 87%; 
+	width: 90%; 
 	gap: 0.3em;
 
 	padding: 0;
-    margin-right: 2em !important;
+	margin: 0 auto 2em;  
                    
   }
   
@@ -267,7 +267,7 @@ section:first-of-type div {
   
 
   /*********************/
-/* section 3 */
+/* section 3 / MEGARIDA */
 /*********************/
 section:nth-of-type(3){
 	position: relative;
@@ -276,7 +276,7 @@ section:nth-of-type(3){
   
   section:nth-of-type(3) img{
 	display: block;  /* nog na checken of dat echt nodig is*/
-	width: 87%;
+	width: 100%;
   }
   
   /* titel */
@@ -352,9 +352,9 @@ section:nth-of-type(3){
 
 /* titel */
 section:nth-of-type(4) h2{
-	margin-left: 1.2em;
-  
-	letter-spacing: 0.09em;
+	margin-left: 0.8em;
+
+	letter-spacing: 0.2em;
 	font-weight: 700;
   
 	font-family: 'Bebas Neue', sans-serif; 
@@ -368,11 +368,11 @@ section:nth-of-type(4) h2{
 	
 	list-style: none;
   
-	width: 87%; 
+	width: 90%; 
 	gap: 0.3em;
   
 	padding: 0;
-	margin-right: 2em !important;               
+	margin: 0 auto 2em;  
   }
   
   /* elke foto apart */
@@ -403,5 +403,96 @@ section:nth-of-type(4) h2{
 	font-weight: 600;
 	font-size: 0.9em;
 	font-family: sans-serif;
+  }
+  
+
+/*********************/
+/* section 5 – productenlijst */
+/*********************/
+
+/* het productgrid = de 2e ul in deze section */
+section:nth-of-type(5) ul:nth-of-type(2) {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr ); 
+	gap: 0.6em;                    
+
+	list-style: none;
+	width: 90%;  
+
+	margin: 0 auto;                 
+	padding: 0;               
+  }
+  
+
+  section:nth-of-type(5) ul:nth-of-type(2) li {
+	position: relative;               /*om het hartje op foto te krijgen*/
+  }
+  
+ 
+  section:nth-of-type(5) ul:nth-of-type(2) img {
+    width: 100%;
+  }
+  
+  /* like knop rechtsboven */
+  section:nth-of-type(5) ul:nth-of-type(2) li button{
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+  
+	width: 2em;
+	height: 2em;
+  }
+
+  
+/* scrolbaar maken van knoppen */
+section:nth-of-type(5) ul:nth-of-type(1){
+	display:flex;
+	gap:0.6em;
+	overflow:auto;    /*wat doet dit*/
+
+	scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+	overscroll-behavior-x:contain;  /*wat doet dit*/
+	
+	padding:0.1em 0.1em;
+	padding-left: 1em;
+	scrollbar-width:none; /* verbergt scrollbar */
+  }
+  
+  /* knoppen vormgeving*/
+  section:nth-of-type(5) ul:nth-of-type(1) button{
+	scroll-snap-align:center;
+  
+	padding:0.4em 0.6em;
+
+	border:0.02em solid grey;
+	background: var(--color-background);
+	color:var(--color-text);
+	white-space:nowrap;    /* zo onstaat er geen regel */
+	
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+  }
+  
+
+  /* Alles bekijken knop*/
+  section:nth-of-type(5) > a {
+	display: block;
+	padding: 0.8em 0.05em;
+	text-indent: 0.7em; 
+	width: 90%;  
+	margin: 0.5em auto; 
+  
+	border: 0.08em solid #000;
+	border-bottom: none;
+  
+	text-decoration: var(--link-decoration);
+	color: var(--color-text);
+
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 1em;
+	font-weight: 570;
+	text-align: left;
   }
   

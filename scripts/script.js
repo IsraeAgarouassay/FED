@@ -28,3 +28,12 @@ function sluitMenu() {
   const deNav = document.querySelector("nav");
   deNav.classList.remove("toonMenu");
 }
+
+
+
+
+
+
+
+
+
