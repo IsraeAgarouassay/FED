@@ -410,7 +410,7 @@ section:nth-of-type(4) h2{
 /* section 5 – productenlijst */
 /*********************/
 
-/* het productgrid = de 2e ul in deze section */
+/* het productgrid */
 section:nth-of-type(5) ul:nth-of-type(2) {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr ); 
@@ -422,13 +422,11 @@ section:nth-of-type(5) ul:nth-of-type(2) {
 	margin: 0 auto;                 
 	padding: 0;               
   }
-  
 
   section:nth-of-type(5) ul:nth-of-type(2) li {
 	position: relative;               /*om het hartje op foto te krijgen*/
   }
   
- 
   section:nth-of-type(5) ul:nth-of-type(2) img {
     width: 100%;
   }
@@ -442,7 +440,6 @@ section:nth-of-type(5) ul:nth-of-type(2) {
 	width: 2em;
 	height: 2em;
   }
-
   
 /* scrolbaar maken van knoppen */
 section:nth-of-type(5) ul:nth-of-type(1){
@@ -479,10 +476,11 @@ section:nth-of-type(5) ul:nth-of-type(1){
   /* Alles bekijken knop*/
   section:nth-of-type(5) > a {
 	display: block;
+
+	width: 90%;  
+	margin: 0.5em auto;
 	padding: 0.8em 0.05em;
 	text-indent: 0.7em; 
-	width: 90%;  
-	margin: 0.5em auto; 
   
 	border: 0.08em solid #000;
 	border-bottom: none;
@@ -492,7 +490,366 @@ section:nth-of-type(5) ul:nth-of-type(1){
 
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	font-size: 1em;
-	font-weight: 570;
+	font-weight: 550;
 	text-align: left;
   }
   
+
+
+
+
+  /*********************/
+/* section 6 – carousel met bekendheden */
+/*********************/
+
+/* carrousel */
+section:nth-of-type(6) ul {
+	display:flex;
+	overflow:auto;   
+
+	scroll-snap-type:x mandatory;      
+	scroll-behavior:smooth;
+	overscroll-behavior-x:contain;
+
+	gap:0.3em;
+	padding: 0.5em 0.75em;               
+	margin-top:3.5em;
+
+	list-style:none;
+	scrollbar-width:none;          
+  }
+  
+  /*tonen van 1 foto en deel van ander  */
+  section:nth-of-type(6) li {
+	flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 78%;
+
+	scroll-snap-align:center;
+  }
+  
+  section:nth-of-type(6) li a {
+	color:var(--color-text);
+	text-decoration:var(--link-decoration);
+  }
+  
+  section:nth-of-type(6) img {                
+	width:100%;
+  }
+  
+  /* h3 onder de foto */
+  section:nth-of-type(6) li a h3 {
+	font-family:'Helvetica Neue', Arial, sans-serif;
+	font-weight:700;
+	font-size:1.1em;
+	line-height:1.2;
+  }
+  
+  /* beschrijving */
+  section:nth-of-type(6) li a p {
+	font-family:'Helvetica Neue', Arial, sans-serif;	
+	font-size: 0.990em;
+	line-height:1.5;
+	color:var(--color-text);
+  }
+  
+  /* Shop nu */
+  section:nth-of-type(6) span{
+	font-family:'Helvetica Neue', Arial, sans-serif;	
+	font-weight:700;
+	text-decoration:underline;
+	text-underline-offset:0.5em;    /*hoe moet ik gpt bron hiervan noteren*/
+  }
+  
+
+  /*********************/
+/* section 7 – apps carousel */
+/*********************/
+
+/* titel */
+section:nth-of-type(7) h2{
+	margin-left: 0.4em;
+
+	letter-spacing: 0.2em;
+	font-weight: 600;
+  
+	font-family: 'Bebas Neue', sans-serif; 
+	font-size: 1.9em;
+  }
+  
+  /* carousel van de apps */
+  section:nth-of-type(7) ul{
+	display:flex;
+	overflow:auto;
+
+	scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+	overscroll-behavior-x:contain;
+
+	gap:0.3em;
+    padding:0.5em 0.75em;
+	
+	list-style:none;
+	scrollbar-width:none;   /*moet weg */
+  }
+  
+  /* tonen van 1 foto en deel van ander */
+  section:nth-of-type(7) li{
+	flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+
+	scroll-snap-align:center;
+  }
+  
+  /* klibaar linkje */
+  section:nth-of-type(7) li a{
+	position:relative;     
+
+	text-decoration:var(--link-decoration);
+	color:var(--color-lines);
+  }
+  
+  section:nth-of-type(7) img{
+	width:100%;
+  }
+  
+  /* label links onder */
+  section:nth-of-type(7) li a p{
+	position:absolute;
+	left:1em;
+	bottom:0.5em;
+    padding:0.4em 0.6em;
+	
+	background:var(--color-background);
+	
+	font-family:sans-serif;
+	font-weight:600;
+	font-size:0.9em;
+  }
+
+
+    /*********************/
+/* section 8 – dropdown */
+/*********************/
+
+section:nth-of-type(8) {
+	padding: 0 2em;
+	margin-bottom: 4.3em;
+  }
+  
+  /* lijn voor dropdown */
+  section:nth-of-type(8) details {
+	border-top: 1px solid #ddd;
+  }
+  
+  section:nth-of-type(8) details:last-of-type {
+	border-bottom: 1px solid #ddd;
+  }
+  
+  /* titel */
+  section:nth-of-type(8) summary {
+	display: flex;
+	justify-content: space-between;  /*ruimte tussen span en tekst*/
+  
+	padding: 1em 0;
+	 
+	font-family:'Helvetica Neue', Arial, sans-serif;	
+	font-size: 1em;
+	font-weight: 700;
+	color: var(--color-text);
+  }
+  
+  /* pijltje rechts in summary */
+  section:nth-of-type(8) span {
+	font-size: 1em;
+	transition: transform 0.2s;
+  }
+  
+  /* draai het pijltje als open */
+  section:nth-of-type(8) details[open] summary span {
+	transform: rotate(180deg);
+  }
+  
+  /* dropdown */
+  section:nth-of-type(8) ul {
+	list-style: none;
+	padding:0;
+  }
+  
+  /* linkjes in de lijst */
+  section:nth-of-type(8) li a {
+	color:var(--color-text);
+	text-decoration:var(--link-decoration);
+	font-size: 1em;
+	line-height: 3.2em;
+  }
+  
+  section:nth-of-type(8) li a:hover {
+	text-decoration: underline;
+  }
+  
+
+  /*********************/
+/* section 9 – footer artikel */
+/*********************/
+
+section:nth-of-type(9){
+	background:#000;       
+	color:#fff;            
+	padding:2em 1em;        
+  }
+  
+  section:nth-of-type(9) h2{
+	text-align:center;
+	letter-spacing:0.1em;
+	line-height:1;
+	margin-top: 1.5em;
+
+	font-family:'Bebas Neue', sans-serif;
+	font-weight:500;
+	font-size:2em;
+  }
+
+  section:nth-of-type(9) p{
+	text-align: justify;
+	line-height:1.6;
+	font-family:sans-serif;
+	font-size:0.96em;
+  }
+  
+  /* logo onderaan*/
+  section:nth-of-type(9) img{
+	display:block; 
+	padding-bottom: 2.5em;     
+	width:18%;         
+	margin:0 auto;         
+  }
+  
+
+
+
+
+  /*********************/
+/* section 10 */
+/*********************/
+section:nth-of-type(10){
+	background:#eef2f5;        
+	padding:1.2em 1em 0;      
+  }
+  
+  /* titel */
+  section:nth-of-type(10) h2{
+	letter-spacing:0.2em;
+	font-family:'Bebas Neue', sans-serif;
+	font-weight:bold;
+	font-size:1.6em;
+  }
+  
+  /* korte tekst */
+  section:nth-of-type(10) p{
+	margin:0 0 1.2em 0;
+	font-family:sans-serif;
+	font-size: 0.9em;
+	color:gray;        /*doet het niet*/
+	color:var(--color-text);
+	
+  }
+  
+  
+  section:nth-of-type(10) li a{
+	color:#fff;
+	text-decoration:none;
+	font-family: sans-serif;
+	font-size: 0.7em;
+	font-weight: 700;
+  }
+  
+  
+
+ 
+    /* zwarte balk met Login / Winkelwagen */
+	section:nth-of-type(10) ul{
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+	  
+		list-style:none;
+	
+		padding:1em 0;
+	  
+		background:#000;
+	  }
+
+
+
+
+
+
+
+
+
+
+
+	  /*********************/
+/* section 11 - Word lid */
+/*********************/
+
+/* de groene band */
+footer section:first-of-type{
+	background:#3b7b68;
+	color:#fff;
+	text-align:center;
+	padding:2em 1em;
+  }
+  
+  /* grote titel */
+  footer section:first-of-type h2{
+    margin-top: 0.4em;
+    padding-bottom: 0.6em;
+
+	letter-spacing:0.180em;
+	
+	font-family:'Bebas Neue', sans-serif;
+	font-weight:600;
+	font-size:1.8em;
+  }
+  
+  /* meld je aan knop */
+  footer section:first-of-type a {
+	position: relative;   /*nodig voor de ::after*/
+
+	padding:1.3em 0.6em;
+
+	background:#fff;
+	color:#111;      
+	
+	text-decoration:none;
+	text-transform:uppercase;
+
+    font-size: 0.9em;
+	letter-spacing:0.04em;
+    font-family: sans-serif;
+	font-weight:700;
+	
+  }
+  
+ 
+
+
+
+
+
+
+
+	  	
+/* tweede lijn achter de knop */
+footer section:first-of-type a:after {
+	content: "";
+	position: absolute;
+	top: 0.2em;
+	left: 0.2em;
+	width: 100%;
+	height: 100%;
+	border: 1px solid white;  
+  }
