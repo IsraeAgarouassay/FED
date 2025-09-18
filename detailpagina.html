@@ -15,29 +15,62 @@
 <body>
 
     <header>
-    
-            <p>Gratis retourneren en omruilen</p>
-   
-    
-    <nav>
-    <ul>
-          <li><button>☰</button></li>   <!-- hamburger -->
-          <li><a href="/wishlist">♡</a></li> <!-- wishlist -->
-    
-          <li>
-            <a href=".">
-              <img src="images/adidas-logo.png" alt="adidas logo"> 
-            </a>
-          </li> <!-- logo -->
-    
-          <li><a href="/account">👤</a></li> <!-- account -->
-          <li><a href="/zoeken">🔍</a></li> <!-- zoeken -->
-          <li><a href="/winkelwagen">🛒</a></li>   <!-- winkelwagen -->
-        </li>
-    </ul>
-    </nav>
-    </header>
+		<!-- eenvoudige hamburger -->
+		<button aria-hidden="true">☰ Menu</button>
+	 
 
+		<nav>
+		  <!-- LOGO (midden) + sluitknop (rechtsboven) -->
+		  <img src="images/adidas-logo.png" alt="adidas logo">
+		  <button aria-hidden="true">✕</button>
+	  
+		  <!-- hoofdmenu -->
+		  <ul>
+			<li><button>HEREN</button></li>
+			<li><a href="#">DAMES</a></li>
+			<li><a href="#">KINDEREN</a></li>
+			<li><a href="#">SCHOENEN</a></li>
+			<li><a href="#">KLEDING</a></li>
+			<li><a href="#">SPORTEN</a></li>
+			<li><a href="#">OUTLET</a></li>
+		  </ul>
+	  
+		  <!-- klikbare links onder elkaar -->
+		  <ul>
+			<li><a href="#">Bestellingsstatus</a></li>
+			<li><a href="#">Account</a></li>
+			<li><a href="#">Store Finder</a></li>
+			<li><a href="#">Hulp</a></li>
+		  </ul>
+	  
+		  <!-- p is ALLEEN zichtbaar op hoofdmenu -->
+		  <p>adiClub-leden: Gratis verzending op alle bestellingen. Makkelijk retourneren &amp; omruilen voor iedereen.</p>
+	  
+		  <!-- submenu 2: HEREN -->
+		  <ul hidden>
+			<li><button>← Terug</button></li>
+			<li><button>Schoenen</button></li>
+			<li><a href="#">Kleding</a></li>
+			<li><a href="#">Accessoires</a></li>
+			<li><a href="#">Sporten</a></li>
+			<li><a href="#">Merken</a></li>
+		  </ul>
+	  
+		  <!-- submenu 3: HEREN → SCHOENEN (enkel deze sub werkt) -->
+		  <ul hidden>
+			<li><button>← Terug</button></li>
+			<li><a href="#">Sneakers</a></li>
+			<li><a href="#">Fitness en Training</a></li>
+			<li><a href="#">Voetbalschoenen</a></li>
+			<li><a href="#">Hardlopen</a></li>
+			<li><a href="#">Wandelsport &amp; Outdoor</a></li>
+			<li><a href="#">Bad- en teenslippers</a></li>
+			<li><a href="#">Golf</a></li>
+			<li><a href="#">Sneakers onder €80</a></li>
+		  </ul>
+		</nav>
+	  </header>
+        
     <main>
      <p>
         <a href="https://www.adidas.nl/">Home</a>
@@ -125,6 +158,7 @@
   </form>
   
    <!-- 2e section maar kiezen + wishlist-->
+   <!-- MOET EEN HEADER HEBBEN-->
 <section>
     <!-- grote zwarte knop en hartje-knop -->
     <button>Kies maat →</button>
@@ -138,6 +172,7 @@
   </section>
   
    <!-- 3e section bezorg info-->
+   <!--MOET EEN HEADER HEBBEN-->
   <section>
     <!-- bezorging pop up -->
     <button>⟳ Bezorgdata ophalen</button>
@@ -151,6 +186,7 @@
   
 
  <!-- 4e section dropdowns -->
+  <!-- MAG EEN DETAIL IN SECTION-->
   <section>
   
     <!-- moeilijk te stijlen dus probeer zo goed mogelijk -->
@@ -324,6 +360,7 @@
 
 
   <!-- 10e section beleid -->
+  <!-- MOET EEN HEADER HEBBEN -->
 <section>
     <button>Cookie-instellingen</button>
     <button>Beheer gegevens</button>
