@@ -949,17 +949,15 @@ footer > ul li a:hover {
 }
 
 
-
 /*********************/
 /*DETAIL PAGINA*/
 /*********************/
 
-
-section.hoofdproduct h1{
+body.detailpagina main section:nth-of-type(1) h1{
  position: static;     /* haalt absolute weg */
   }
   
-  section.hoofdproduct h1{
+  body.detailpagina main section:nth-of-type(1) h1{
 	margin: 1em 0.5em;
 
 	color:var(--color-text);
@@ -971,7 +969,7 @@ section.hoofdproduct h1{
 
   }
 
-  section.hoofdproduct h2{ 
+  body.detailpagina main section:nth-of-type(1) h2{ 
 	font-family:'Bebas Neue', sans-serif;
 	letter-spacing:0.03em;
 	font-size:1.1em;
@@ -980,7 +978,7 @@ section.hoofdproduct h1{
    }
 	
    /* carrousel */
-  section.hoofdproduct ul{
+  body.detailpagina main section:nth-of-type(1) ul{
 	display: flex;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
@@ -990,7 +988,7 @@ section.hoofdproduct h1{
 	padding: 0;
   }
 
-  section.hoofdproduct ul li{
+  body.detailpagina main section:nth-of-type(1) ul li{
 	flex-grow: 0;                 
     flex-shrink: 0;               
     flex-basis: 100%;             
@@ -998,7 +996,7 @@ section.hoofdproduct h1{
   }
   
   /* afbeelding */
-  section.hoofdproduct ul li img{
+  body.detailpagina main section:nth-of-type(1) ul li img{
 	width: 100%;
 	height: auto;
   }
@@ -1006,17 +1004,17 @@ section.hoofdproduct h1{
 
 
   /*********************/
-/* Kleuren (fieldset 1) */
-/*********************/
+  /* Kleuren (fieldset 1) */
+  /*********************/
 
-/*lijn weg om de 1e fieldset*/
-form fieldset:nth-of-type(1){
+  /*lijn weg om de 1e fieldset*/
+  body.detailpagina main form fieldset:nth-of-type(1){
 	border:none;
 	margin:0.8em;
   }
   
  /*kopje-kleuren*/ 
-  form fieldset:nth-of-type(1) legend{
+  body.detailpagina main form fieldset:nth-of-type(1) legend{
 	margin:0.4em -0.2em;
 
 	font-family:'Bebas Neue', sans-serif;
@@ -1027,7 +1025,7 @@ form fieldset:nth-of-type(1){
   }
   
    /*foto's op een rij*/ 
-  form fieldset:nth-of-type(1) ul{
+  body.detailpagina main form fieldset:nth-of-type(1) ul{
 	display:flex;
 	gap:0.6em;
 	list-style:none;
@@ -1036,25 +1034,25 @@ form fieldset:nth-of-type(1){
   }
   
      /*radio buttons onzichtbaar maken*/ 
-  form fieldset:nth-of-type(1) label input{
+  body.detailpagina main form fieldset:nth-of-type(1) label input{
 	position:absolute;
 	opacity:0;
   }
 
    /*lijn onder foto + foto grootte*/ 
-  form fieldset:nth-of-type(1) label img{
+  body.detailpagina main form fieldset:nth-of-type(1) label img{
 	width:105%;
 	height:auto;
 	border-bottom:0.35em solid transparent;  
   }
   
   /*zwarte onderlijn wordt zichtbaar als die gecheckd is */
-form fieldset:nth-of-type(1) label:has(input:checked) img{
+body.detailpagina main form fieldset:nth-of-type(1) label:has(input:checked) img{
 	border-bottom-color:black;
   }
 
  /* fieldset 1 – eerste p*/
-form fieldset:nth-of-type(1) p:nth-of-type(1){
+body.detailpagina main form fieldset:nth-of-type(1) p:nth-of-type(1){
 	margin: 0.4em 0;
 	font-family: sans-serif;
 	font-size: 0.8em;
@@ -1062,7 +1060,7 @@ form fieldset:nth-of-type(1) p:nth-of-type(1){
   }
   
   /* fieldset 1 – tweede p*/
-  form fieldset:nth-of-type(1) p:nth-of-type(2){
+  body.detailpagina main form fieldset:nth-of-type(1) p:nth-of-type(2){
 	margin: 1em 0;
 	font-family: sans-serif;
 	font-size: 0.87em;
@@ -1071,20 +1069,19 @@ form fieldset:nth-of-type(1) p:nth-of-type(1){
   }
   
   
- /* JE BENT GEBLEVEN BIJ DE MATEN*/
 
   /*********************/
   /* Matentabel (fieldset 2) */
   /*********************/
 
-  form fieldset:nth-of-type(2){	
+  body.detailpagina main form fieldset:nth-of-type(2){	
 	margin:0.5em;
 	padding:0;
 	border: none;
   }
   
    /*kopje-maten */
-  form fieldset:nth-of-type(2) legend{
+  body.detailpagina main form fieldset:nth-of-type(2) legend{
 	margin:0.8em -0.2em;
 
 	font-family:'Bebas Neue', sans-serif;
@@ -1095,7 +1092,7 @@ form fieldset:nth-of-type(1) p:nth-of-type(1){
   }
   
   /* grid voor maten tabel */
-  form fieldset:nth-of-type(2) ul{
+  body.detailpagina main form fieldset:nth-of-type(2) ul{
 	display:grid;
 	grid-template-columns: repeat(4, 1fr);
 	
@@ -1107,13 +1104,13 @@ form fieldset:nth-of-type(1) p:nth-of-type(1){
   }
   
   /* radio button verbergen */
-  form fieldset:nth-of-type(2) label input{
+  body.detailpagina main form fieldset:nth-of-type(2) label input{
 	position:absolute;
 	opacity:0;
   }
   
   /* maten individueel */
-  form fieldset:nth-of-type(2) label{
+  body.detailpagina main form fieldset:nth-of-type(2) label{
 	display:block;
 	padding:0.9em 0.6em;
 	text-align:center;
@@ -1127,13 +1124,13 @@ form fieldset:nth-of-type(1) p:nth-of-type(1){
   }
 
   /* gekozen maat - zwart met witte tekst */
-  form fieldset:nth-of-type(2) label:has(input:checked){
+  body.detailpagina main form fieldset:nth-of-type(2) label:has(input:checked){
 	background:black;
 	color: white;
   }
   
   /* info-box onder het maten tabel */
-  form fieldset:nth-of-type(2) p{
+  body.detailpagina main form fieldset:nth-of-type(2) p{
 	display: inline-flex;
 	gap: 0.5em;
 
@@ -1147,7 +1144,7 @@ form fieldset:nth-of-type(1) p:nth-of-type(1){
 	line-height:1.4;
   }
 
-  form fieldset:nth-of-type(2) svg {
+  body.detailpagina main form fieldset:nth-of-type(2) svg {
 	height: 1.7em;
 	margin-left: 1em;
   }
@@ -1156,8 +1153,164 @@ form fieldset:nth-of-type(1) p:nth-of-type(1){
 
 /*********************/
  /* in winkelwagen knop*/
+ /*********************/
+
+
+/*de h2 verbergen */
+body.detailpagina main section:nth-of-type(2) h2 {
+	display: none;
+}
+
+/*padding en flex voor om de knop*/
+body.detailpagina main section:nth-of-type(2){
+	display: flex;
+	flex-wrap: wrap;   /*wat doet dit*/
+	gap: 0.8em 1em;
+	padding: 0 1em;
+  }
+  
+/* winkelwagen knop */
+body.detailpagina main section:nth-of-type(2) button:nth-of-type(1){
+	flex: 1 1 73%;      /*wat doet dit precies*/
+	padding: 0.8em 1em;
+	background: #000;
+	color: #fff;
+	border: none;
+
+	position: relative;    /*wat doet deze hier*/
+	display: inline-flex;
+	align-items: center;
+	text-align: left;
+
+	font-family: sans-serif;
+	font-size: 1em;
+	font-weight: 700;
+  }
+  
+  /* lijn achter de winkelwagen knop */
+  body.detailpagina main section:nth-of-type(2) button:nth-of-type(1)::after{
+	content: "";
+	position: absolute;
+	top: 0.2em;
+	left: 0.2em;
+	width: 100%;
+	height: 100%;
+	border: 0.07em solid #000;
+  }
+  
+  /* winkelwagen-icoon */
+  body.detailpagina main section:nth-of-type(2) button:nth-of-type(1) svg{
+	margin-left: auto;
+	width: 2em;
+	border: none;
+  }
+
+ /* kleur van winkelwagen-icoon */
+  body.detailpagina main section:nth-of-type(2) button:nth-of-type(1) svg path{
+	fill: #fff;
+  }
+  
+  /* wishlist-knop - buitenste rand */
+  body.detailpagina main section:nth-of-type(2) button:nth-of-type(2){
+	height: 4em;
+	background: #fff;
+	border: 0.07em solid #000;
+  }
+  
+  /* hart-icoon grootte etc */
+  body.detailpagina main section:nth-of-type(2) button:nth-of-type(2) svg{
+	width: 2.6em;
+	height: 3em;
+	background: none;
+  }
+
+  body.detailpagina main section:nth-of-type(2) button:nth-of-type(2) svg path{
+	fill: black;
+	stroke: #000;
+	stroke-width: 0.01em;
+  }
+  
+  /* p - onder de winkelwagen knop */
+  body.detailpagina main section:nth-of-type(2) p{
+	margin-top: 0.45em;
+	color: rgb(88, 87, 87);
+  
+	font-family: sans-serif;
+	font-size: 0.85em;
+	line-height: 1;
+  }
+
+  body.detailpagina main section:nth-of-type(2) p a {
+	text-decoration: underline;
+	color: gray;
+  }
+  
 /*********************/
+ /*verzending + betaling linkjes*/
+ /*********************/
 
+  /* Verzendinfo - lijst onder elkaar */
+  body.detailpagina main section:nth-of-type(2) ul{
+	width: 100%;
+	display: block;        
+  }
+  
+  /* Bezorgdata-knop */
+body.detailpagina main section:nth-of-type(2) button:nth-of-type(3){
+	width: 100%;
+	background: none;
+	border: none;
+	padding: 0.8em 0;
+  
+	border-top: 0.08em solid #e5e5e5;
+	border-bottom: 0.08em solid #e5e5e5;
+  
+	display: flex;
+	gap: 0.6em;
+	text-decoration: underline;
+  
+	font-family: sans-serif;
+	font-size: 0.95em;     
+	font-weight: 700;
+	color: var(--color-text);          
+  }
+  
+/* icoon- bezorgdata (grootte)*/
+body.detailpagina main section:nth-of-type(2) button:nth-of-type(3) svg{
+	width: 1.1em;        
+	height: 1.4em;
+  }
+  
+/*grootte li en breedte*/
+body.detailpagina main section:nth-of-type(2) ul li{
+    padding: 0.6em 0;
+	width: 100%;
+}
 
+/*laatste lijn onder verzend info*/
+body.detailpagina main section:nth-of-type(2) ul li:last-child{
+	padding-bottom: 4.5em; 
+	border-bottom: 0.08em solid #e5e5e5;
+  }
+  
+/* styling p en afstand svg->p */
+  body.detailpagina main section:nth-of-type(2) ul li p{
+	display: flex;
+	align-items: center;
 
+	gap: 0.6em;
+	margin: 0;
+  
+	font-family: sans-serif;
+	font-size: 0.95em;      
+	font-weight: 700;
+	color:var(--color-text);            
+	text-decoration: underline;
+  }
 
+  
+/*********************/
+ /*dropdowns*/
+ /*********************/
+ 
+  
