@@ -123,7 +123,7 @@ section:first-of-type img{
   
 
 /* h1 op de foto positioneren en stylen */
-  section:first-of-type h1 {
+  section:first-of-type  h1 {
 	position: absolute;      /* legt hem bovenop de foto */
 	left: 0.3em;
 	bottom: 6.5em;          
@@ -179,7 +179,7 @@ section:first-of-type div {
 	bottom: 3.5em;
 	
 	left: 41%;
-	transform: translateX(-50%);  /*wat houdt dit in */
+	transform: translateX(-50%); 
   
 	width: 80%;         /* totale rij smaller -> past op scherm */
 	display: flex;
@@ -235,8 +235,8 @@ section:first-of-type div {
   
   /* elke foto appart */
   section:nth-of-type(2) li a {
-	display: block;              /*waar is dit voor*/
-	position: relative;         /*waar is dit voor*/
+	display: block;              
+	position: relative;         
 
 	color:var(--color-text);
   }
@@ -414,15 +414,16 @@ section:nth-of-type(5) ul:nth-of-type(2) {
 	grid-template-columns: repeat(2, 1fr ); 
 	gap: 0.6em;                    
 
-	list-style: none;
 	width: 90%;  
 
 	margin: 0 auto;                 
-	padding: 0;               
+	padding: 0;    
+	list-style: none;           
   }
 
   section:nth-of-type(5) ul:nth-of-type(2) li {
 	position: relative;               /*om het hartje op foto te krijgen*/
+
   }
   
   section:nth-of-type(5) ul:nth-of-type(2) img {
@@ -438,26 +439,27 @@ section:nth-of-type(5) ul:nth-of-type(2) {
 	width: 2em;
 	height: 2em;
   }
-  
+
 /* scrolbaar maken van knoppen */
 section:nth-of-type(5) ul:nth-of-type(1){
 	display:flex;
 	gap:0.6em;
-	overflow:auto;    /*wat doet dit*/
-
+	overflow:auto;
+	
 	scroll-snap-type:x mandatory;
 	scroll-behavior:smooth;
-	overscroll-behavior-x:contain;  /*wat doet dit*/
+	overscroll-behavior-x:contain;  
 	
 	padding:0.1em 0.1em;
 	padding-left: 1em;
 	scrollbar-width:none; /* verbergt scrollbar */
+
+	list-style: none;
   }
   
   /* knoppen vormgeving*/
   section:nth-of-type(5) ul:nth-of-type(1) button{
 	scroll-snap-align:center;
-  
 	padding:0.4em 0.6em;
 
 	border:0.02em solid grey;
@@ -774,25 +776,11 @@ section:nth-of-type(10){
   
   
 
- 
-    /* zwarte balk met Login / Winkelwagen */
-	section:nth-of-type(10) ul{
-		display:flex;
-		justify-content:space-around;
-		align-items:center;
-	  
-		list-style:none;
-	
-		padding:1em 0;
-	  
-		background:#000;
-	  }
 
 
 
 
-
-	  /*********************/
+ /*********************/
 /* section 11 - Word lid */
 /*********************/
 
@@ -910,14 +898,10 @@ text-decoration: var(--link-decoration);
 font-weight: bold;	
 }
 
-
 /*********************/
 /* footer - beleid*/
 /*********************/
 
-
-
-  /* Zwarte basis voor dit blok */
 footer {
 	background:#000;
   }
@@ -938,4 +922,242 @@ footer {
 	font-size:1em;
 	font-weight:700;
   }
+ 
+/* footer - beleid links */
+footer > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* twee kolommen */
+ 
+  gap: 1.5em 0.4em;                           
+  padding-left: 3em !important;
+  padding: 2em 0;
+  margin: 0;
+
+  list-style: none;                      
+}
+
+footer > ul li a {
+  color: #fff;
+  text-decoration: var(--link-decoration);
+  font-family: sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+}
+
+footer > ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*********************/
+/*DETAIL PAGINA*/
+/*********************/
+
+
+section.hoofdproduct h1{
+ position: static;     /* haalt absolute weg */
+  }
   
+  section.hoofdproduct h1{
+	margin: 1em 0.5em;
+
+	color:var(--color-text);
+
+	font-family:'Bebas Neue', sans-serif;
+	font-weight:700;
+	font-size:1.5em;
+	letter-spacing:0.04em;
+
+  }
+
+  section.hoofdproduct h2{ 
+	font-family:'Bebas Neue', sans-serif;
+	letter-spacing:0.03em;
+	font-size:1.1em;
+	
+	margin-left: 1em;
+   }
+	
+   /* carrousel */
+  section.hoofdproduct ul{
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+  
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+
+  section.hoofdproduct ul li{
+	flex-grow: 0;                 
+    flex-shrink: 0;               
+    flex-basis: 100%;             
+	scroll-snap-align: center;
+  }
+  
+  /* afbeelding */
+  section.hoofdproduct ul li img{
+	width: 100%;
+	height: auto;
+  }
+  
+
+
+  /*********************/
+/* Kleuren (fieldset 1) */
+/*********************/
+
+/*lijn weg om de 1e fieldset*/
+form fieldset:nth-of-type(1){
+	border:none;
+	margin:0.8em;
+  }
+  
+ /*kopje-kleuren*/ 
+  form fieldset:nth-of-type(1) legend{
+	margin:0.4em -0.2em;
+
+	font-family:'Bebas Neue', sans-serif;
+	font-weight:700;
+	font-size:1em;
+
+	letter-spacing:0.03em;
+  }
+  
+   /*foto's op een rij*/ 
+  form fieldset:nth-of-type(1) ul{
+	display:flex;
+	gap:0.6em;
+	list-style:none;
+	margin:0;
+	padding:0;
+  }
+  
+     /*radio buttons onzichtbaar maken*/ 
+  form fieldset:nth-of-type(1) label input{
+	position:absolute;
+	opacity:0;
+  }
+
+   /*lijn onder foto + foto grootte*/ 
+  form fieldset:nth-of-type(1) label img{
+	width:105%;
+	height:auto;
+	border-bottom:0.35em solid transparent;  
+  }
+  
+  /*zwarte onderlijn wordt zichtbaar als die gecheckd is */
+form fieldset:nth-of-type(1) label:has(input:checked) img{
+	border-bottom-color:black;
+  }
+
+ /* fieldset 1 – eerste p*/
+form fieldset:nth-of-type(1) p:nth-of-type(1){
+	margin: 0.4em 0;
+	font-family: sans-serif;
+	font-size: 0.8em;
+	color: #444;
+  }
+  
+  /* fieldset 1 – tweede p*/
+  form fieldset:nth-of-type(1) p:nth-of-type(2){
+	margin: 1em 0;
+	font-family: sans-serif;
+	font-size: 0.87em;
+	color: black;
+	line-height: 1.3;
+  }
+  
+  
+ /* JE BENT GEBLEVEN BIJ DE MATEN*/
+
+  /*********************/
+  /* Matentabel (fieldset 2) */
+  /*********************/
+
+  form fieldset:nth-of-type(2){	
+	margin:0.5em;
+	padding:0;
+	border: none;
+  }
+  
+   /*kopje-maten */
+  form fieldset:nth-of-type(2) legend{
+	margin:0.8em -0.2em;
+
+	font-family:'Bebas Neue', sans-serif;
+	font-weight:700;
+	font-size:1em;
+
+	letter-spacing:0.03em;
+  }
+  
+  /* grid voor maten tabel */
+  form fieldset:nth-of-type(2) ul{
+	display:grid;
+	grid-template-columns: repeat(4, 1fr);
+	
+	list-style:none;
+
+	gap:0.4em;
+	margin:0;
+	padding:0;
+  }
+  
+  /* radio button verbergen */
+  form fieldset:nth-of-type(2) label input{
+	position:absolute;
+	opacity:0;
+  }
+  
+  /* maten individueel */
+  form fieldset:nth-of-type(2) label{
+	display:block;
+	padding:0.9em 0.6em;
+	text-align:center;
+  
+	background:#eef2f5;           
+  
+	font-family:sans-serif;
+	font-size:0.8em;
+	font-weight:200;
+	color:#111;
+  }
+
+  /* gekozen maat - zwart met witte tekst */
+  form fieldset:nth-of-type(2) label:has(input:checked){
+	background:black;
+	color: white;
+  }
+  
+  /* info-box onder het maten tabel */
+  form fieldset:nth-of-type(2) p{
+	display: inline-flex;
+	gap: 0.5em;
+
+	margin:0.9em 0;
+	padding:0.9em 0.5em;
+	border:0.1em solid #000;
+
+	font-family:sans-serif;
+	font-size:0.9em;
+	color:var(--color-text);
+	line-height:1.4;
+  }
+
+  form fieldset:nth-of-type(2) svg {
+	height: 1.7em;
+	margin-left: 1em;
+  }
+  
+  
+
+/*********************/
+ /* in winkelwagen knop*/
+/*********************/
+
+
+
+
