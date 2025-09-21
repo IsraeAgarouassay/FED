@@ -1380,23 +1380,21 @@ nav img {
 	/*maak je look helemal - carrousel*/
 	/*********************/
 
-/* reset tegen eventuele absolute posities van de index */
-
-body.detailpagina main section:nth-of-type(3) > h2 {
+body.detailpagina main section:nth-of-type(3)  h2 {
 		position: static;
 }
 	
 /* carrousel */
 body.detailpagina main section:nth-of-type(3) ul {
-		display: flex;
-		overflow: auto;
-		scroll-snap-type: x mandatory;
-		scroll-behavior: smooth;
-		overscroll-behavior-x: contain;
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x: contain;
 
-		gap: 0.1em;
-		padding: 0.3em 0.4em;
-		list-style: none;
+	gap: 0.1em;
+	padding: 0.3em 0.4em;
+	list-style: none;
 }
 
 body.detailpagina main section:nth-of-type(3) li {
@@ -1446,7 +1444,7 @@ body.detailpagina main section:nth-of-type(3) li a h3 {
 	}
 	
 	/* span - originals */
-	body.detailpagina main section:nth-of-type(3) li a span {
+body.detailpagina main section:nth-of-type(3) li a span {
 		display: block;
 		width: 100%;
 		margin: 0 auto .6em;
@@ -1458,5 +1456,19 @@ body.detailpagina main section:nth-of-type(3) li a h3 {
 	}
 	
 body.detailpagina main section:nth-of-type(3) h2 {
-font-family: ;
+	margin-top: 3em;
+
+	font-weight: 800;
+	font-family: 'Bebas Neue', sans-serif; 
+	font-size: 1.7em;
 	}
+
+
+
+
+
+
+
+
+
+	
