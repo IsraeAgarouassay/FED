@@ -33,20 +33,13 @@
 	/* HAMBURGER MENU */
 	/*********************/
 
-
-
-
-
-
-
-
-	
-
 header {
 	display:flex;
+	flex-wrap: wrap;
 	position:sticky;
-	padding: var(--menu-padding);
+
 	z-index: 1;
+	padding: 0;
 }
 		
 /*logo in de hamburger menu*/
@@ -57,26 +50,14 @@ nav img {
 	}
 
 
-/*de svg op een rij*/
-header:first-of-type > ul {
-    display: flex;
-    list-style: none;
-}
 
-/*uitgeklapte pop up die nu verborgen is*/
-header div p {
-	overflow: hidden;
-	max-height: 0;
-	padding: 0;
-}
 
 /* MENU knop */
 header button {
 	order:-1;
 	font:inherit;
 	background:none;
-	border: 0;
-		
+	border: 0;	
 }
 
 /* sluitknop rechtsboven */
@@ -124,6 +105,70 @@ nav > button {
 	}
 	
 
+header div button {
+display: block;
+width: 100%;
+padding: 1.0em;
+font-weight: 700;
+
+background-color: black;
+color: var(--color-background);
+}
+	
+
+/***********************
+  iconen/header + promobalk
+***********************/
+
+/* uitklapcontent standaard dicht eerst */
+header  div  p {
+  margin: 0.0em;
+  padding: 0.0em 1.0em;
+  max-height: 0.0em;
+  overflow: hidden;
+}
+
+
+/* Iconen - svg */
+header:first-of-type > ul {
+	display: grid;
+	list-style: none;
+
+	margin: 0.0em;
+	padding: 0.4em 0.4em; 
+	              
+	grid-template-columns: repeat(7, 1fr); 
+  }
+  
+  /* plaatsing svg binnen grid */
+  header:first-of-type > ul > li:nth-child(1) { grid-column: 1; }
+  header:first-of-type > ul > li:nth-child(2) { grid-column: 2; }
+  header:first-of-type > ul > li:nth-child(3) { grid-column: 4;} /* logo */
+  header:first-of-type > ul > li:nth-child(4) { grid-column: 6; }
+  header:first-of-type > ul > li:nth-child(5) { grid-column: 7; }
+  header:first-of-type > ul > li:nth-child(6) { grid-column: 8;} /* helemaal rechts */
+ 
+/*hamburger icoon - apparte styling */
+header:first-of-type > ul > li:nth-child(1) svg {
+	height: 2em;   
+	width: auto;
+	margin-right: 0.5em;
+} 
+
+/* HART icoon - apparte styling */
+header:first-of-type > ul > li:nth-child(5) svg,
+header:first-of-type > ul > li:nth-child(2) svg {
+	height: 2em;   
+	width: auto;
+} 
+
+/* LOGO - apparte styling */
+header:first-of-type > ul > li:nth-child(3) svg {
+	height: 2em;   
+	width: auto;   
+	margin-left: 1.9em; 
+}
+  
 
 
 
@@ -195,7 +240,6 @@ nav > button {
 	}
 
 	/* knoppen op de foto positioneren en stylen*/
-
 	section:first-of-type div {
 		position: absolute;
 		bottom: 3.5em;
@@ -435,7 +479,6 @@ nav > button {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr ); 
 		gap: 0.6em;                    
-
 		width: 90%;  
 
 		margin: 0 auto;                 
@@ -452,16 +495,17 @@ nav > button {
 		width: 100%;
 	}
 	
-	/* like knop rechtsboven */
-	section:nth-of-type(5) ul:nth-of-type(2) li button{
-		position: absolute;
-		top: 0.5em;
-		right: 0.5em;
+  /* plaatsen van hartje rechts boven  */
+  section:nth-of-type(5) ul:nth-of-type(2) li > button {
+	all: unset;
+	position: absolute;
 	
-		width: 2em;
-		height: 2em;
-	}
-
+	top: 0.5em;
+	right: 0.5em;
+	width: 2.0em;
+	height: 2.0em;
+  }
+  
 	/* scrolbaar maken van knoppen */
 	section:nth-of-type(5) ul:nth-of-type(1){
 		display:flex;

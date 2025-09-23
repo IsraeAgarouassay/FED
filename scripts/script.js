@@ -3,7 +3,7 @@
 /* hamburgermenu openen de MENU button */
 
 // stap 1: zoek de menu-button op
-const openButton = document.querySelector("header > button");
+const openButton = document.querySelector("header > ul > li:first-child button");
 
 // stap 2: laat de menu-button luisteren naar kliks
 openButton.addEventListener("click", openMenu);
