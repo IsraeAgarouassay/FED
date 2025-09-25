@@ -100,3 +100,7 @@ function resetNaarHoofdMenu() {
   deNav.classList.remove("toonMannenSneakers");
 }
 
+
+
+
+

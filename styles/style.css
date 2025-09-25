@@ -10,7 +10,12 @@
 		padding: 0;
 		scroll-behavior: smooth;
 	}
-	
+
+	/* ul {
+		margin: 0;
+		padding: 0;
+	}
+	 */
 
 
 
@@ -195,6 +200,45 @@ header:first-of-type > ul > li:nth-child(3) svg {
 	margin-left: 1.9em; 
 }
   
+/*********************/
+/* Mini nav + revieuw sterren op 2e pagina */
+/*********************/
+
+/* detailpagina: breadcrumb links links, sterren rechts */
+ body.detailpagina main > ul:nth-of-type(1) {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  } 
+  
+  body.detailpagina main > ul:nth-of-type(1) > li > a {
+	padding-right: 0.2em; 
+	color: var(--color-text);
+	font-size: 1em;
+	font-family:'Helvetica Neue', Arial, sans-serif;
+  } 
+  
+
+  /* alle overgebleven ruimte in de rij opvullen*/
+  body.detailpagina main > ul:nth-of-type(1) > li:nth-child(3) {
+	flex: 1;
+  }
+
+  /* revieuw sterren */
+  body.detailpagina main > ul:nth-of-type(1) > li > svg {
+	width: 0.9em;
+	height: 0.9em;
+	margin-right: 0.09em;
+	margin-top: 0.5em;
+  }
+  
+  body.detailpagina main > ul:nth-of-type(1) > li:last-child a {
+	font-size: 1.1em;
+	margin-left: 0.4em;
+  }
+
 
 
 
