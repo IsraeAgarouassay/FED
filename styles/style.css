@@ -227,10 +227,10 @@ header:first-of-type > ul > li:nth-child(3) svg {
   }
 
   /* revieuw sterren */
-  body.detailpagina main > ul:nth-of-type(1) > li > svg {
+  body.detailpagina main > ul:nth-of-type(1) > li > a > svg {
 	width: 0.9em;
 	height: 0.9em;
-	margin-right: 0.09em;
+	
 	margin-top: 0.5em;
   }
   
@@ -249,7 +249,13 @@ header:first-of-type > ul > li:nth-child(3) svg {
 	/* de foto juist positioneren */
 	section:first-of-type{
 		position: relative;
-		margin: 0 auto;
+		height: 75vh;
+
+		background-image: url("../images/eerste-foto-homepagina.jpeg");
+		background-position: center;          
+		background-size: cover;                
+		background-repeat: no-repeat;  
+    
 	}
 
 
@@ -405,7 +411,11 @@ header:first-of-type > ul > li:nth-child(3) svg {
 	/*********************/
 	section:nth-of-type(3){
 		position: relative;
-		margin: 0 auto;
+		height: 75vh;                      
+		background-image: url("../images/megarida.jpg");
+		background-position: center;          
+		background-size: cover;                
+		background-repeat: no-repeat;  
 	}
 	
 	section:nth-of-type(3) img{
@@ -545,7 +555,8 @@ header:first-of-type > ul > li:nth-child(3) svg {
 	/*********************/
 
 	/* het productgrid */
-	section:nth-of-type(5) ul:nth-of-type(2) {
+	section:nth-of-type(5) ul:nth-of-type(2),
+	section:nth-of-type(5) ul:nth-of-type(3) {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr ); 
 		gap: 0.6em;                    
@@ -556,17 +567,20 @@ header:first-of-type > ul > li:nth-child(3) svg {
 		list-style: none;           
 	}
 
-	section:nth-of-type(5) ul:nth-of-type(2) li {
+	section:nth-of-type(5) ul:nth-of-type(2) li,
+	section:nth-of-type(5) ul:nth-of-type(3) li {
 		position: relative;               /*om het hartje op foto te krijgen*/
 
 	}
-	
-	section:nth-of-type(5) ul:nth-of-type(2) img {
+
+	section:nth-of-type(5) ul:nth-of-type(2) img,
+	section:nth-of-type(5) ul:nth-of-type(3) img {
 		width: 100%;
 	}
 	
   /* plaatsen van hartje rechts boven  */
-  section:nth-of-type(5) ul:nth-of-type(2) li > button {
+  section:nth-of-type(5) ul:nth-of-type(2) li > button,
+  section:nth-of-type(5) ul:nth-of-type(3) li > button {
 	all: unset;
 	position: absolute;
 	top: 0.5em;
@@ -576,10 +590,13 @@ header:first-of-type > ul > li:nth-child(3) svg {
   }
   
 
+  
+    /* knop waarop wordt geklikt veranderd van kleur */
+section:nth-of-type(5) ul:nth-of-type(1) button:focus {   
+  background: #000;
+  color: #fff;
 
-
-
-
+}
 
 	
 	/* scrolbaar maken van knoppen */
@@ -730,23 +747,50 @@ header:first-of-type > ul > li:nth-child(3) svg {
 		scroll-snap-type:x mandatory;
 		scroll-behavior:smooth;
 		overscroll-behavior-x:contain;
+		scroll-marker-group:after;
 
 		gap:0.3em;
 		padding:0.5em 0.75em;
 		
 		list-style:none;
-		scrollbar-width:none;   /*moet weg */
+		scrollbar-width:none;   
+		scrollbar-color: black;
+		
 	}
 	
+	section:nth-of-type(7) ul::scroll-marker-group {
+		display:flex;
+		width: 100%;
+		margin-left: 0.25em;
+	}
+
 	/* tonen van 1 foto en deel van ander */
 	section:nth-of-type(7) li{
-		flex-grow: 0;
+		
 		flex-shrink: 0;
 		flex-basis: 50%;
 
 		scroll-snap-align:center;
 	}
 	
+	section:nth-of-type(7) li::scroll-marker {
+		content: '' / attr(data-label);
+		display: flex;
+		width: 7.4em;  
+	
+        height: 0.3em;
+		aspect-ratio: 10;
+		background-color:#00000059;
+		transition: 80ms;
+
+	}
+
+
+	section:nth-of-type(7) li::scroll-marker:target-current {
+		background:#151415 !important;
+	  }
+
+
 	/* klibaar linkje */
 	section:nth-of-type(7) li a{
 		position:relative;     
@@ -772,6 +816,14 @@ header:first-of-type > ul > li:nth-child(3) svg {
 		font-weight:600;
 		font-size:0.9em;
 	}
+
+
+
+
+
+
+
+
 
 
 		/*********************/
@@ -884,6 +936,20 @@ header:first-of-type > ul > li:nth-child(3) svg {
 	/*********************/
 	/* section 10 - jou mening telt*/
 	/*********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	section:nth-of-type(10){
 		background:#eef2f5;        
 		padding:1.2em 1em 0;      
@@ -917,11 +983,6 @@ header:first-of-type > ul > li:nth-child(3) svg {
 	}
 	
 	
-
-
-
-
-
 	/*********************/
 	/* section 11 - Word lid */
 	/*********************/
@@ -931,6 +992,7 @@ header:first-of-type > ul > li:nth-child(3) svg {
 		color:#fff;
 		text-align:center;
 		padding:2em 1em;
+		height: 25vh;
 	}
 	
 	/*titel */
@@ -1093,17 +1155,17 @@ header:first-of-type > ul > li:nth-child(3) svg {
 	/*********************/
 	/*DETAIL PAGINA*/
 	/*********************/
+	body.detailpagina main section:nth-of-type(1) {
+    background-image: none;
+	}
 
 	body.detailpagina main section:nth-of-type(1) h1{
-	position: static;     /* haalt absolute weg */
-	}
-	
-	body.detailpagina main section:nth-of-type(1) h1{
+		position: static; 
 		margin: 1em 0;
         margin-bottom: -0.1em;
 		margin-left: 0.2em;
 		color:var(--color-text);
-
+	
 		font-family: sans-serif;
 		font-weight:700;
 		font-size:1.5em;
@@ -1122,13 +1184,56 @@ header:first-of-type > ul > li:nth-child(3) svg {
 		
 	/* carrousel */
 	body.detailpagina main section:nth-of-type(1) ul{
-		display: flex;
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
-	
+		display:flex;
+		overflow:auto;
+
+
+		scroll-snap-type:x mandatory;
+		scroll-behavior:smooth;
+		overscroll-behavior-x:contain;
+		scroll-marker-group:after;
+
+		list-style:none;
+		scrollbar-width:none;   
+		scrollbar-color: black;
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+
+
+		
+	/* scrolbar */
+	body.detailpagina main section:nth-of-type(1) ul::scroll-marker-group {
+		display:flex;
+		gap: 0.2em;
+		margin-left: 6.8em;
+	}
+	
+	body.detailpagina main section:nth-of-type(1) li::scroll-marker {
+		content: '' / attr(data-label);
+		display: flex;
+		width: 0.9em;  
+
+	    border-radius: 0.5em; 
+        height: 0.2em;
+		aspect-ratio: 10;
+		background-color:#00000059;
+		transition: 80ms;
+
+	}
+
+	body.detailpagina main section:nth-of-type(1) li::scroll-marker:target-current {
+		background:#151415 !important;
+	  }
+
+
+	/* tonen van 1 foto en deel van ander */
+	body.detailpagina main section:nth-of-type(1) li{
+		flex-shrink: 0;
+		flex-basis: 50%;
+	
+		scroll-snap-align:center;
 	}
 
 	body.detailpagina main section:nth-of-type(1) ul li{
@@ -1136,15 +1241,20 @@ header:first-of-type > ul > li:nth-child(3) svg {
 		flex-shrink: 0;               
 		flex-basis: 100%;             
 		scroll-snap-align: center;
+	
 	}
 	
 	/* afbeelding */
 	body.detailpagina main section:nth-of-type(1) ul li img{
 		width: 100%;
 		height: auto;
+		
 	}
 	
-
+	/* carrousel die verborgen is */
+	  .hidden {
+		 display: none !important; 
+		}
 
 	/*********************/
 	/* Kleuren (fieldset 1) */
@@ -1524,17 +1634,25 @@ header:first-of-type > ul > li:nth-child(3) svg {
 /*maak je look helemal - carrousel*/
 /*********************/
 	
+body.detailpagina main section:nth-of-type(3) {
+    background-image: none;
+	}
 /* carrousel */
 body.detailpagina main section:nth-of-type(3) ul {
-	display: flex;
-	overflow: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	overscroll-behavior-x: contain;
+	display:flex;
+	overflow:auto;
 
-	gap: 0.1em;
-	padding: 0.3em 0.4em;
+	scroll-snap-type:x mandatory;
+	scroll-behavior:smooth;
+	overscroll-behavior-x:contain;
+	scroll-marker-group:after;
+
+	list-style:none;
+	scrollbar-width:none;   
+	scrollbar-color: black;
 	list-style: none;
+	margin-left: 0.6em;
+	padding: 0;
 }
 
 body.detailpagina main section:nth-of-type(3) li {
@@ -1544,6 +1662,31 @@ body.detailpagina main section:nth-of-type(3) li {
 		scroll-snap-align: center;
 }
 	
+
+	
+	/* scrolbar */
+	body.detailpagina main section:nth-of-type(3) ul::scroll-marker-group {
+		display:flex;
+		margin-left: 0.5em;
+		margin-top: 3em;
+	}
+	
+	body.detailpagina main section:nth-of-type(3) li::scroll-marker {
+		content: '' / attr(data-label);
+		display: flex;
+		width: 5.5em;  
+        height: 0.3em;
+		aspect-ratio: 10;
+		background-color:#00000059;
+		transition: 80ms;
+
+	}
+
+	body.detailpagina main section:nth-of-type(3) li::scroll-marker:target-current {
+		background:#151415 !important;
+	  }
+
+
 /* linkjes */
 body.detailpagina main section:nth-of-type(3) li a {
 		color: var(--color-text);
@@ -1626,15 +1769,45 @@ body.detailpagina main section:nth-of-type(4) h2{
 body.detailpagina main section:nth-of-type(4) ul{
 	display:flex;
 	overflow:auto;
+
 	scroll-snap-type:x mandatory;
 	scroll-behavior:smooth;
 	overscroll-behavior-x:contain;
+	scroll-marker-group:after;
 
-	gap:0.6em;
-	padding:0.4em 0.6em;
-	margin:0;
 	list-style:none;
+	scrollbar-width:none;   
+	scrollbar-color: black;
+	list-style: none;
+	margin-left: 0.7em;
+	padding: 0;
   }
+
+  
+	/* scrolbar */
+	body.detailpagina main section:nth-of-type(4) ul::scroll-marker-group {
+		display:flex;
+		margin-left: 0.5em;
+		margin-top: 3em;
+		margin-bottom: 4em;
+	}
+	
+	body.detailpagina main section:nth-of-type(4) li::scroll-marker {
+		content: '' / attr(data-label);
+		display: flex;
+		width: 4.4em;  
+        height: 0.3em;
+		aspect-ratio: 10;
+		background-color:#00000059;
+		transition: 80ms;
+
+	}
+
+	body.detailpagina main section:nth-of-type(4) li::scroll-marker:target-current {
+		background:#151415 !important;
+	  }
+
+
   
 body.detailpagina main section:nth-of-type(4) li{
 	flex-basis:50%;
@@ -1724,9 +1897,17 @@ body.detailpagina main section:nth-of-type(5) p{
 
 body.detailpagina main section:nth-of-type(5) a {
 all: unset;
+display:inline-flex;         
+align-items:center;           
+justify-content: center; 
+
+background-color: #dcdcdc;
+padding: 0.4em 1em;
+width: 100%;
+margin-left: -1em;
+
+font-family:sans-serif;
 
 
 }
-
-
 

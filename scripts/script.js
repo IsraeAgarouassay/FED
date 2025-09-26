@@ -31,12 +31,6 @@ function sluitMenu() {
 
 
 
-
-
-
-
-
-
 /* HEREN (toonMannenSchoenen) -------------------------------------- */
 /* stap 1 */
 const knopHeren = document.querySelector("nav > ul:nth-of-type(1) li:first-child > button");
@@ -102,5 +96,77 @@ function resetNaarHoofdMenu() {
 
 
 
+// DETAILPAGINA - kleur schoen veranderen
+
+// Knoppen (labels) in fieldset 1 
+const BlauweSchoen = document.querySelector(
+  'body.detailpagina main form fieldset:nth-of-type(1) ul li:nth-of-type(1) input[type="radio"]'
+);
+const ZilvereSchoen = document.querySelector(
+  'body.detailpagina main form fieldset:nth-of-type(1) ul li:nth-of-type(3) input[type="radio"]'
+);
+
+// de twee Carrousels 
+const Eerstecarrousel = document.querySelector(
+  'body.detailpagina main section:nth-of-type(1) > ul:nth-of-type(1)'
+);
+const Tweedecarrousel = document.querySelector(
+  'body.detailpagina main section:nth-of-type(1) > ul:nth-of-type(2)'
+);
 
 
+if (BlauweSchoen && ZilvereSchoen && Eerstecarrousel && Tweedecarrousel) {
+function toonTweedeCarrousel() {
+console.log('blauwe schoen toegevoegd');
+ Eerstecarrousel.classList.add('hidden');
+ Tweedecarrousel.classList.remove('hidden');
+}
+
+function toonEersteCarrousel() {
+  console.log('zilvere schoen toegevoegd');
+ Tweedecarrousel.classList.add('hidden');
+ Eerstecarrousel.classList.remove('hidden');
+}
+
+BlauweSchoen.addEventListener('click', toonTweedeCarrousel);
+ZilvereSchoen.addEventListener('click', toonEersteCarrousel);
+
+// starttoestand: 1e zichtbaar, 2e verborgen
+Eerstecarrousel.classList.remove('hidden');
+Tweedecarrousel.classList.add('hidden');
+}
+
+
+
+
+
+
+// HOMEPAGINA - Productlijst
+
+// SELECTIES (allemaal via document.querySelector)
+const productLijst1 = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(2)');
+const productLijst2 = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(3)');
+
+const knopExclusieveLeden = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(1) li:nth-of-type(1) > button');
+const knopNieuweProducten = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(1) li:nth-of-type(2) > button');
+
+
+if (productLijst1 && productLijst2 && knopExclusieveLeden && knopNieuweProducten) {
+function toonProductLijst1() {
+  productLijst2.classList.add('hidden');
+  productLijst1.classList.remove('hidden');
+}
+
+function toonProductLijst2() {
+  productLijst1.classList.add('hidden');
+  productLijst2.classList.remove('hidden');
+}
+
+
+knopExclusieveLeden.addEventListener('click', toonProductLijst1);
+knopNieuweProducten.addEventListener('click', toonProductLijst2);
+
+// starttoestand: 1e zichtbaar, 2e verborgen
+productLijst1.classList.remove('hidden');
+productLijst2.classList.add('hidden');
+}
