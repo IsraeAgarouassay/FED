@@ -76,28 +76,121 @@ header {
 /*logo in de hamburger menu*/
 nav img {
 	display: block;
-	width:18%;
+	width:15%;
 	margin: 0 auto;
+	margin-top: 1em;
 	}
-
-
-
-
-/* MENU knop */
-header button {
-	order:-1;
-	font:inherit;
-	background:none;
-	border: 0;	
-}
 
 /* sluitknop rechtsboven */
 nav > button {
 	position: absolute;
 	top: 1em;
-	right: 1em;
+	right: 2em;
 	font-size: 1.5em;
 }
+
+
+/* UL - totale inhoud gecentreerd met padding rondom */
+header > nav > ul:first-of-type {
+  margin: 0;
+  padding: 2em;      
+  list-style: none;
+  display: flex;
+  flex-direction: column;  /*wat is dit*/
+
+  position: relative;
+  padding-top: 1.25em;                
+  border-bottom: 1px solid rgb(145, 143, 143); 
+}
+
+/* GRID - tekst + pijl goed plaatsen */
+header > nav > ul:first-of-type > li > a,
+header > nav > ul:first-of-type > li > button {
+  display: grid;
+  grid-template-columns: 1fr 3em; /*wats dit*/
+  align-items: center;
+
+  column-gap: 0.5em;
+  padding: 0.6em 0; 
+
+  line-height: 2;           
+  width: 100%;
+  text-decoration: none;
+}
+
+/* HEREN-button links uitgelijnd*/
+header > nav > ul:first-of-type > li:first-of-type > button {
+  text-align: left;
+ 
+}
+
+/* Pijl svg rechts */
+header > nav > ul:first-of-type > li > a > svg,
+header > nav > ul:first-of-type > li > button > svg {
+  justify-self: end;
+  width: 2em;
+  height: 1.8em;
+}
+
+header > nav > ul:first-of-type > li > a,
+header > nav > ul:first-of-type > li > button {
+  font-size: 1.125em;
+  font-weight: 500;
+  font-family:'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.02em;
+ 
+}
+
+header > nav > ul:first-of-type > li > button,
+header > nav > ul:first-of-type > li:nth-of-type(2) > a,
+header > nav > ul:first-of-type > li:nth-of-type(3) > a,
+header > nav > ul:first-of-type > li:last-of-type > a {
+  font-weight: 700;
+}
+
+/*om lijn boven button te krijgen*/
+header > nav > ul:first-of-type::before {
+  content: "";
+  position: absolute;
+  left: 0; 
+  right: 0;
+             
+  border-top: 1px solid rgb(145, 143, 143);
+}
+
+
+
+/* Basis voor ALLE ul in nav */
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tweede UL in nav */
+header > nav > ul:nth-of-type(2) {
+ margin-left: 2em;
+}
+
+/* Service-links zelf */
+header > nav > ul:nth-of-type(2) > li > a {
+  display: block;
+  padding: 0.6em 0;             /* verticale ruimte */
+  
+  font-size: 1.1em;               /* pas dit aan naar wens */
+  font-weight:lighter;             /* 400 = normaal, 700 = bold */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+
+  color: #111;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+
+
 
 	/* hoofdmenu*/
 	header nav {
@@ -114,15 +207,22 @@ nav > button {
 		transition:translate .3s;
 	}
 	
+
+/* MENU knop */
+header button {
+	order:-1;
+	font:inherit;
+	background:none;
+	border: 0;	
+}
+
 	/* als menu open is */
 	nav.toonMenu {
 		translate:0% 0%;
 		z-index: 5;
 	}
 	
-	header nav ul {
-		list-style:none;
-	}
+	
 
 	header nav a {
 		display:block;
@@ -134,8 +234,9 @@ nav > button {
 	header nav p {
 		padding: 1em 1em;
 	}
-	
 
+	
+/*promo balk*/
 header div button {
 display: block;
 width: 100%;
@@ -146,6 +247,37 @@ background-color: black;
 color: var(--color-background);
 }
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***********************
   iconen/header + promobalk
@@ -826,7 +958,7 @@ section:nth-of-type(5) ul:nth-of-type(1) button:focus {
 
 
 
-		/*********************/
+	/*********************/
 	/* section 8 – dropdown */
 	/*********************/
 
@@ -864,7 +996,7 @@ section:nth-of-type(5) ul:nth-of-type(1) button:focus {
 	}
 	
 	/* draai het pijltje als open */
-	section:nth-of-type(8) details[open] summary span {
+	section:nth-of-type(8) details[open] summary svg {
 		transform: rotate(180deg);
 	}
 	
@@ -936,20 +1068,6 @@ section:nth-of-type(5) ul:nth-of-type(1) button:focus {
 	/*********************/
 	/* section 10 - jou mening telt*/
 	/*********************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	section:nth-of-type(10){
 		background:#eef2f5;        
 		padding:1.2em 1em 0;      
@@ -983,6 +1101,21 @@ section:nth-of-type(5) ul:nth-of-type(1) button:focus {
 	}
 	
 	
+section:nth-of-type(10) a {
+all: unset;
+display:inline-flex;         
+align-items:center;           
+justify-content: center; 
+
+background-color: #dcdcdc;
+padding: 0.4em 1em;
+width: 100%;
+margin-left: -1em;
+
+font-family:sans-serif;
+
+
+}
 	/*********************/
 	/* section 11 - Word lid */
 	/*********************/
@@ -1579,7 +1712,7 @@ section:nth-of-type(5) ul:nth-of-type(1) button:focus {
 		justify-content: space-between;  
 	
 		padding: 1.875em 0.9375em;      
-	
+
 		font-family: sans-serif;
 		font-size: 1em;
 		font-weight: 700;
@@ -1596,10 +1729,73 @@ section:nth-of-type(5) ul:nth-of-type(1) button:focus {
 		transition: transform 0.2s;
 	}
 
-	body.detailpagina main details[open] summary svg{
+   body.detailpagina main details[open] summary svg:last-of-type  {
 		transform: rotate(180deg);
 	}
 	
+    /*svg - sterretjes */
+    body.detailpagina main details:nth-of-type(3) summary svg:nth-of-type(-n+5) {   
+        width: 1.4em;
+        height: 1.4em;
+	}
+
+	  /*svg - sterretjes rechts plaatsen */
+    body.detailpagina main details:nth-of-type(3) summary {
+       display: flex;
+       align-items: center;
+    }
+
+     /* duw vanaf de 1e ster-svg alles naar rechts */
+    body.detailpagina main details:nth-of-type(3) summary > svg:first-of-type {
+      margin-left: auto;
+    }
+
+
+
+
+
+
+/* sterren naast elkaar in dropdown */
+#beoordelingen ul {
+  display: flex;
+  gap: 0.5em; 
+
+  padding: 0;
+  margin-bottom: 4em;
+  margin-top: 1.5em;
+  margin-left: 0.8em;
+
+  list-style: none;
+}
+
+/* knoppen als zwarte vierkantjes in dropdown  */
+#beoordelingen li button {
+  all: unset;             
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+
+  width: 2.8em;
+  height: 2.8em;
+}
+
+/* knop kleur geven bij aanklikken */
+#beoordelingen li button:focus {
+  background: black;
+  color: white;
+  
+}
+
+/* sterren netjes passend in de knop  */
+#beoordelingen li button svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.2em; 
+}
+
+
 	/* inhoud van de dropdown */
 	body.detailpagina main details h2{
 		margin: 1em 0.6em;
@@ -1618,11 +1814,11 @@ section:nth-of-type(5) ul:nth-of-type(1) button:focus {
 		color: var(--color-text);
 	}
 	
-	/* bullet bij 2e dropdown */
+	/* bullet points bij 2e dropdown */
 	body.detailpagina main details ul{
 		margin-top: -1em;
 		line-height: 2.6;
-
+      
 		font-family: sans-serif;
 		font-size: 1.1em;
 		color: var(--color-text);
