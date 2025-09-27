@@ -11,14 +11,6 @@
 		scroll-behavior: smooth;
 	}
 
-	/* ul {
-		margin: 0;
-		padding: 0;
-	}
-	 */
-
-
-
 	/*********************/
 	/* CUSTOM PROPERTIES */
 	/*********************/
@@ -38,6 +30,12 @@
 	/* HAMBURGER MENU */
 	/*********************/
 
+/* Basis voor ALLE ul in nav */
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 /* Paneel voor HEREN (3e ul) en SNEAKERS (4e ul) schuiven in over het hoofdmenu */
 header nav > ul:nth-of-type(3),
@@ -65,13 +63,9 @@ header nav.toonMannenSneakers > ul:nth-of-type(4) {
 
 
 header {
-	display:flex;
-	flex-wrap: wrap;
 	position:sticky;
-
 	z-index: 1;
-	padding: 0;
-}
+} 
 		
 /*logo in de hamburger menu*/
 nav img {
@@ -89,7 +83,7 @@ nav > button {
 	font-size: 1.5em;
 }
 
-
+/* 1E PAGINA HOOFDMENU */
 /* UL - totale inhoud gecentreerd met padding rondom */
 header > nav > ul:first-of-type {
   margin: 0;
@@ -158,38 +152,150 @@ header > nav > ul:first-of-type::before {
   border-top: 1px solid rgb(145, 143, 143);
 }
 
-
-
-/* Basis voor ALLE ul in nav */
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 /* Tweede UL in nav */
 header > nav > ul:nth-of-type(2) {
  margin-left: 2em;
 }
 
-/* Service-links zelf */
+/* linkjes onder hoofdmenu */
 header > nav > ul:nth-of-type(2) > li > a {
-  display: block;
-  padding: 0.6em 0;             /* verticale ruimte */
-  
-  font-size: 1.1em;               /* pas dit aan naar wens */
-  font-weight:lighter;             /* 400 = normaal, 700 = bold */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  letter-spacing: 0.04em;
-  line-height: 1.4;
+  padding: 0.6em 0;         
 
-  color: #111;
+  font-size: 1.1em;               
+  font-weight:lighter;            
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+
+  color: black;
   text-decoration: none;
-  white-space: nowrap;
+}
+
+/*p onder nav*/
+header nav p {
+	padding: 1em 2em;
+}
+
+/* nl vlag sticky en plaatsing */
+header > nav > div:last-of-type {
+  position: sticky;
+  display: flex;
+  align-items: center;
+ 
+  bottom: 0;
+  gap: 0.6em;
+  padding: 0.8em 1.25em;
+
+  border-top: 1px solid gray;
+  background: #fff;
+}
+
+/*vlag*/
+header > nav > div:last-of-type > img {
+  width: 1.5em;
+  border: 2px solid black;
+  margin: 0;
+}
+
+/* tekst nl */
+header > nav > div:last-of-type > span {
+  font: 400;
+  font-size: 1em;
+  font-family:'Helvetica Neue', Arial, sans-serif; 
 }
 
 
 
+
+/* SUBMENU''S */
+header > nav > ul:nth-of-type(3),
+header > nav > ul:nth-of-type(4) {
+  margin: 0;
+  padding: 2em;      
+  list-style: none;
+  display: flex;
+  flex-direction: column;  /*wat is dit*/
+
+  padding-top: 1.25em;                
+}
+
+/* GRID - tekst + pijl goed plaatsen */
+header > nav > ul:nth-of-type(3) > li > a,
+header > nav > ul:nth-of-type(3) > li > button {
+  display: grid;
+  grid-template-columns: 1fr 3em; /*wats dit*/
+  align-items: center;
+
+  column-gap: 0.5em;
+  padding: 0.6em 0; 
+
+  line-height: 2;           
+  width: 100%;
+  text-decoration: none;
+}
+
+/* HEREN-button links uitgelijnd*/
+header > nav > ul:nth-of-type(3) > li:first-of-type > button {
+  text-align: left;
+}
+
+/* Pijl svg rechts */
+header > nav > ul:nth-of-type(3) > li > a > svg,
+header > nav > ul:nth-of-type(3) > li > button > svg {
+  justify-self: end;
+  width: 2em;
+  height: 1.8em;
+}
+
+header > nav > ul:nth-of-type(3) > li > a,
+header > nav > ul:nth-of-type(3) > li > button,
+header > nav > ul:nth-of-type(4) > li > a,
+header > nav > ul:nth-of-type(4) > li > button {
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family:'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.02em;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ALGEMENE STYLING HAMBURGERMENU*/
+
+/* zodat logo en sluitknop op elke menu te zien is */
+header > nav > ul:nth-of-type(3),
+header > nav > ul:nth-of-type(4) {
+  top: 3.25em; 
+}
+
+/* lijn onder de topbalk ook in submenu's */
+header > nav.toonMannenSchoenen > ul:nth-of-type(3),
+header > nav.toonMannenSneakers  > ul:nth-of-type(4) {
+  margin-top: 1em;
+  border-top: 2px solid rgba(0,0,0,.12);
+}
+
+/* Zorgt dat submenu niet scrolbaar is */
+header > nav.toonMannenSchoenen {
+  overflow: hidden;    
+}
+
+header > nav.toonMannenSneakers {
+  overflow: hidden;
+}
 
 
 	/* hoofdmenu*/
@@ -221,8 +327,6 @@ header button {
 		translate:0% 0%;
 		z-index: 5;
 	}
-	
-	
 
 	header nav a {
 		display:block;
@@ -231,48 +335,6 @@ header button {
 		color:#111;
 	}
 	
-	header nav p {
-		padding: 1em 1em;
-	}
-
-	
-/*promo balk*/
-header div button {
-display: block;
-width: 100%;
-padding: 1.0em;
-font-weight: 700;
-
-background-color: black;
-color: var(--color-background);
-}
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -282,15 +344,37 @@ color: var(--color-background);
 /***********************
   iconen/header + promobalk
 ***********************/
+	
+/*promo balk*/
+header div button {
+width: 100%;
+padding: 1.0em;
+font-weight: 700;
+background-color: black;
 
-/* uitklapcontent standaard dicht eerst */
-header  div  p {
-  margin: 0.0em;
-  padding: 0.0em 1.0em;
-  max-height: 0.0em;
-  overflow: hidden;
+color: transparent; 
 }
 
+/*promo balk animeren*/
+header > div:first-child > button::after {
+  content: "Gratis retourneren en omruilen";
+  display: flex;
+  justify-content: center;
+  margin-top: -1em;
+  
+  color: #fff;
+  animation: promoBalkFade 9s infinite;
+}
+
+/* Keyframes met fade */
+@keyframes promoBalkFade {
+  0%, 20%   { content:"Gratis retourneren en omruilen"; opacity:1; }
+  25%, 30%  { opacity:0; }
+  35%, 55%  { content:"Gratis verzending vanaf €50"; opacity:1; }
+  60%, 65%  { opacity:0; }
+  70%, 90%  { content:"Nieuwe collectie nu online"; opacity:1; }
+  95%, 100% { opacity:0; }
+}
 
 /* Iconen - svg */
 header:first-of-type > ul {

@@ -45,21 +45,9 @@ function openMannenSchoenenMenu() {
   deNav.classList.remove("toonMannenSneakers");
 }
 
-/* ← Terug vanuit HEREN (naar hoofdmenu) --------------------------- */
-/* stap 1 */
-const knopTerugHeren = document.querySelector("nav > ul:nth-of-type(3) li:first-child > button");
-/* stap 2 */
-knopTerugHeren.addEventListener("click", terugNaarHoofdMenu);
-/* stap 3 */
-function terugNaarHoofdMenu() {
-  const deNav = document.querySelector("nav");
-  deNav.classList.remove("toonMannenSchoenen");
-  deNav.classList.remove("toonMannenSneakers");
-}
-
 /* HEREN → SNEAKERS (toonMannenSneakers) --------------------------- */
 /* stap 1 */
-const knopSchoenen = document.querySelector("nav > ul:nth-of-type(3) li:nth-child(2) > button");
+const knopSchoenen = document.querySelector("nav > ul:nth-of-type(3) li:nth-child(1) > button");
 /* stap 2 */
 knopSchoenen.addEventListener("click", openMannenSneakersMenu);
 /* stap 3 */
@@ -67,18 +55,6 @@ function openMannenSneakersMenu() {
   const deNav = document.querySelector("nav");
   deNav.classList.add("toonMannenSneakers");
   deNav.classList.remove("toonMannenSchoenen");
-}
-
-/* ← Terug vanuit SNEAKERS (terug naar HEREN) ---------------------- */
-/* stap 1 */
-const knopTerugSneakers = document.querySelector("nav > ul:nth-of-type(4) li:first-child > button");
-/* stap 2 */
-knopTerugSneakers.addEventListener("click", terugNaarMannenSchoenenMenu);
-/* stap 3 */
-function terugNaarMannenSchoenenMenu() {
-  const deNav = document.querySelector("nav");
-  deNav.classList.add("toonMannenSchoenen");
-  deNav.classList.remove("toonMannenSneakers");
 }
 
 /* optioneel: reset naar hoofdmenu bij openen hamburger / sluiten X */
