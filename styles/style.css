@@ -11,6 +11,9 @@
 		scroll-behavior: smooth;
 	}
 
+/* Laat de content onder beide balken beginnen */
+body { padding-top: 2.6em; }  
+
 	/*********************/
 	/* CUSTOM PROPERTIES */
 	/*********************/
@@ -64,6 +67,7 @@ header nav.toonMannenSneakers > ul:nth-of-type(4) {
 
 header {
 	position:sticky;
+	background-color: white;
 	z-index: 1;
 } 
 		
@@ -87,7 +91,8 @@ nav > button {
 /* UL - totale inhoud gecentreerd met padding rondom */
 header > nav > ul:first-of-type {
   margin: 0;
-  padding: 2em;      
+  padding: 2em;   
+
   list-style: none;
   display: flex;
   flex-direction: column;  /*wat is dit*/
@@ -259,20 +264,6 @@ header > nav > ul:nth-of-type(4) > li > button {
  
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*ALGEMENE STYLING HAMBURGERMENU*/
 
 /* zodat logo en sluitknop op elke menu te zien is */
@@ -325,7 +316,7 @@ header button {
 	/* als menu open is */
 	nav.toonMenu {
 		translate:0% 0%;
-		z-index: 5;
+		z-index: 1200;
 	}
 
 	header nav a {
@@ -336,24 +327,26 @@ header button {
 	}
 	
 
-
-
-
-
-
 /***********************
   iconen/header + promobalk
 ***********************/
 	
 /*promo balk*/
 header div button {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 1200;
 width: 100%;
-padding: 1.0em;
+padding: 0.8em 1.25em;
 font-weight: 700;
 background-color: black;
-
-color: transparent; 
 }
+
+header{
+  padding-top: 3.25em; /* match de visuele hoogte van de promo */
+}
+
+
 
 /*promo balk animeren*/
 header > div:first-child > button::after {
@@ -378,15 +371,27 @@ header > div:first-child > button::after {
 
 /* Iconen - svg */
 header:first-of-type > ul {
-	display: grid;
+	position: fixed;
+    display: grid;
 	list-style: none;
 
+    grid-template-columns: repeat(7, 1fr); 
+    z-index: 1000;
+    top: 2.6em;  
+	
+	background-color: white;
 	margin: 0.0em;
 	padding: 0.4em 0.4em; 
-	              
-	grid-template-columns: repeat(7, 1fr); 
   }
-  
+
+
+
+
+
+
+
+
+
   /* plaatsing svg binnen grid */
   header:first-of-type > ul > li:nth-child(1) { grid-column: 1; }
   header:first-of-type > ul > li:nth-child(2) { grid-column: 2; }
@@ -416,6 +421,55 @@ header:first-of-type > ul > li:nth-child(3) svg {
 	margin-left: 1.9em; 
 }
   
+
+
+
+/* anker als positionering voor badge */
+header > ul:first-of-type li:last-child > a { 
+position: relative; 
+}
+
+/* het bolletje */
+header > ul:first-of-type li:last-child > a > span {
+  position: absolute;       /* zet het bolletje los van de normale flow, zodat het
+                               bovenop/rechts van het winkelwagen-icoon kan zweven */
+  top: -1.8em;            
+  right: -0.4em;         
+  
+  min-width: 1.3em;      
+  height: 1.30em;        
+  padding: 0.25em 0.12em 0.12em 0.25em;       
+  
+  border-radius: 2em;  
+  background: #4f8e79e6;     
+  color: #fff;              
+  
+  font-size: 0.75em;       
+  font-weight: 700;    
+  text-align: center;
+       
+}
+
+header a span.updated {
+  animation-name: updated;
+  animation-duration: .2s;
+  animation-iteration-count: 2;
+}
+
+@keyframes updated {
+  0% {
+    scale:1;
+  }
+  50% {
+    scale:1.5;
+  }
+  100% {
+    scale:1;
+  }
+}
+
+
+
 /*********************/
 /* Mini nav + revieuw sterren op 2e pagina */
 /*********************/

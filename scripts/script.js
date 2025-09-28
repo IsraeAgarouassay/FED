@@ -113,10 +113,6 @@ Tweedecarrousel.classList.add('hidden');
 }
 
 
-
-
-
-
 // HOMEPAGINA - Productlijst
 
 // SELECTIES (allemaal via document.querySelector)
@@ -146,3 +142,67 @@ knopNieuweProducten.addEventListener('click', toonProductLijst2);
 productLijst1.classList.remove('hidden');
 productLijst2.classList.add('hidden');
 }
+
+
+
+
+/************************/
+/* naar kliks luisteren */
+/************************/
+
+// https://pixabay.com/sound-effects/search/finished/
+const klaargeluid = new Audio('geluid/toegevoegd-geluid.mp3'); 
+const koptekst = document.querySelector('section:nth-of-type(2) button') 
+           
+
+/************************/
+/* naar kliks luisteren */
+/************************/
+
+/* exact lespatroon: querySelectorAll + for-lus */
+var shopButtons = document.querySelectorAll("section:nth-of-type(2) button:first-of-type");
+for (let i = 0; i < shopButtons.length; i++) {
+  shopButtons[i].onclick = addToShoppingCart;
+}
+
+/***********************/
+/* winkelwagen vullen  */
+/***********************/
+function addToShoppingCart() {
+  /* exact als lescode: innerHTML gebruiken */
+  let shoppingCartAmount = document.querySelector("header > ul:first-of-type li:last-child > a > span");
+  let currentAmount = shoppingCartAmount.innerHTML;
+  currentAmount = parseInt(currentAmount);
+  let newAmount = currentAmount + 1;
+  shoppingCartAmount.innerHTML = newAmount;
+
+  klaargeluid.play();
+
+// https://www.youtube.com/watch?v=0OVg4ikUaz0&t=28s
+// Laad-status tonen
+  const geklikt = this;
+  geklikt.textContent = "Toevoegen...";
+
+// Na 1,5s "Toegevoegd ✔"
+  setTimeout(() => {
+    geklikt.textContent = "Toegevoegd ✔";
+  }, 1100);
+
+  /* animatie exact als lescode */
+  shoppingCartAmount.classList.add("updated");
+  shoppingCartAmount.onanimationend = () => {
+    shoppingCartAmount.classList.remove("updated");
+  };
+}
+
+
+// document.addEventListener('keydown', (e) => {
+//   if (e.key === 'Escape') {
+//     const nav = document.querySelector('nav');
+//     if (nav) nav.classList.remove('toonMenu', 'toonMannenSchoenen', 'toonMannenSneakers');
+//   }
+// });
+
+
+
+
