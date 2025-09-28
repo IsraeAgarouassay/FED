@@ -2,28 +2,22 @@
 
 /* hamburgermenu openen de MENU button */
 
-// stap 1: zoek de menu-button op
 const openButton = document.querySelector("header > ul > li:first-child button");
 
-// stap 2: laat de menu-button luisteren naar kliks
 openButton.addEventListener("click", openMenu);
 
-// stap 3: voeg in de functie een class toe aan de nav
 function openMenu() {
   const deNav = document.querySelector("nav");
   deNav.classList.add("toonMenu");
 }
 
-
 /* menu sluiten met de sluit button */
 
-// stap 1 - zoek sluiten button op
 const sluitButton = document.querySelector("nav > button");
 
-// stap 2 - laat die button luisteren naar kliks
+
 sluitButton.addEventListener("click", sluitMenu);
 
-// stap 3 - in de functie verwijder de class van de nav
 function sluitMenu() {
   const deNav = document.querySelector("nav");
   deNav.classList.remove("toonMenu");
@@ -32,13 +26,11 @@ function sluitMenu() {
 
 
 /* HEREN (toonMannenSchoenen) -------------------------------------- */
-/* stap 1 */
+
 const knopHeren = document.querySelector("nav > ul:nth-of-type(1) li:first-child > button");
 
-/* stap 2 */
 knopHeren.addEventListener("click", openMannenSchoenenMenu);
 
-/* stap 3 */
 function openMannenSchoenenMenu() {
   const deNav = document.querySelector("nav");
   deNav.classList.add("toonMannenSchoenen");
@@ -46,31 +38,39 @@ function openMannenSchoenenMenu() {
 }
 
 /* HEREN → SNEAKERS (toonMannenSneakers) --------------------------- */
-/* stap 1 */
 const knopSchoenen = document.querySelector("nav > ul:nth-of-type(3) li:nth-child(1) > button");
-/* stap 2 */
+
 knopSchoenen.addEventListener("click", openMannenSneakersMenu);
-/* stap 3 */
+
 function openMannenSneakersMenu() {
   const deNav = document.querySelector("nav");
   deNav.classList.add("toonMannenSneakers");
   deNav.classList.remove("toonMannenSchoenen");
 }
 
-/* optioneel: reset naar hoofdmenu bij openen hamburger / sluiten X */
+/*terug naar hoofdmenu bij openen hamburger en sluiten*/
 const knopHamburger = document.querySelector("header > ul > li:first-child button");
-knopHamburger.addEventListener("click", resetNaarHoofdMenu);
+
+knopHamburger.addEventListener("click", terugNaarHoofdMenu);
 
 const knopSluitNav = document.querySelector("nav > button");
-knopSluitNav.addEventListener("click", resetNaarHoofdMenu);
+knopSluitNav.addEventListener("click", terugNaarHoofdMenu);
 
-function resetNaarHoofdMenu() {
+function terugNaarHoofdMenu() {
   const deNav = document.querySelector("nav");
   deNav.classList.remove("toonMannenSchoenen");
   deNav.classList.remove("toonMannenSneakers");
 }
 
 
+// https://javascriptf1.com/snippet/detect-escape-key-press-in-javascript
+document.addEventListener('keydown', evt => {
+  // checkt of de ingedrukte toets de Escape-toets is
+    if (evt.key === 'Escape') {
+        const nav = document.querySelector('nav');
+    if (nav) nav.classList.remove('toonMenu', 'toonMannenSchoenen', 'toonMannenSneakers');
+    }
+});
 
 // DETAILPAGINA - kleur schoen veranderen
 
@@ -113,12 +113,15 @@ Tweedecarrousel.classList.add('hidden');
 }
 
 
-// HOMEPAGINA - Productlijst
+// HOMEPAGINA - Productlijst zichtbaar maken en onzichtbaar
 
-// SELECTIES (allemaal via document.querySelector)
+
+// productlijsten
 const productLijst1 = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(2)');
 const productLijst2 = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(3)');
 
+
+// knoppen boven productlijst
 const knopExclusieveLeden = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(1) li:nth-of-type(1) > button');
 const knopNieuweProducten = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(1) li:nth-of-type(2) > button');
 
@@ -134,7 +137,6 @@ function toonProductLijst2() {
   productLijst2.classList.remove('hidden');
 }
 
-
 knopExclusieveLeden.addEventListener('click', toonProductLijst1);
 knopNieuweProducten.addEventListener('click', toonProductLijst2);
 
@@ -147,62 +149,96 @@ productLijst2.classList.add('hidden');
 
 
 /************************/
-/* naar kliks luisteren */
+/* winkelwagen */
 /************************/
 
 // https://pixabay.com/sound-effects/search/finished/
-const klaargeluid = new Audio('geluid/toegevoegd-geluid.mp3'); 
-const koptekst = document.querySelector('section:nth-of-type(2) button') 
-           
+const geluidToegevoegd = new Audio('geluid/toegevoegd-geluid.mp3');
 
-/************************/
-/* naar kliks luisteren */
-/************************/
-
-/* exact lespatroon: querySelectorAll + for-lus */
-var shopButtons = document.querySelectorAll("section:nth-of-type(2) button:first-of-type");
-for (let i = 0; i < shopButtons.length; i++) {
-  shopButtons[i].onclick = addToShoppingCart;
+// alle “in winkelwagen”-knoppen binnen de 2e section
+let winkelKnoppen = document.querySelectorAll("section:nth-of-type(2) button:first-of-type");
+for (let i = 0; i < winkelKnoppen.length; i++) {
+  winkelKnoppen[i].onclick = toevoegenAanWinkelwagen;
 }
 
-/***********************/
-/* winkelwagen vullen  */
-/***********************/
-function addToShoppingCart() {
-  /* exact als lescode: innerHTML gebruiken */
-  let shoppingCartAmount = document.querySelector("header > ul:first-of-type li:last-child > a > span");
-  let currentAmount = shoppingCartAmount.innerHTML;
-  currentAmount = parseInt(currentAmount);
-  let newAmount = currentAmount + 1;
-  shoppingCartAmount.innerHTML = newAmount;
+// winkelwagen vullen
+function toevoegenAanWinkelwagen() {
+  /* bolletje op de winkelwagen */
+  let winkelwagenAantal = document.querySelector("header > ul:first-of-type li:last-child > a > span");
+  let huidigAantal = parseInt(winkelwagenAantal.innerHTML);
+  let nieuwAantal = huidigAantal + 1;
+  winkelwagenAantal.innerHTML = nieuwAantal;
 
-  klaargeluid.play();
+  geluidToegevoegd.play();
 
-// https://www.youtube.com/watch?v=0OVg4ikUaz0&t=28s
-// Laad-status tonen
-  const geklikt = this;
-  geklikt.textContent = "Toevoegen...";
+  // https://www.youtube.com/watch?v=0OVg4ikUaz0&t=28s
+  // Laad-status tonen
+  const geklikteKnop = this;
+  geklikteKnop.textContent = "Toevoegen...";
 
-// Na 1,5s "Toegevoegd ✔"
+  // Na ~1,1s "Toegevoegd ✔"
   setTimeout(() => {
-    geklikt.textContent = "Toegevoegd ✔";
+    geklikteKnop.textContent = "Toegevoegd ✔";
   }, 1100);
 
-  /* animatie exact als lescode */
-  shoppingCartAmount.classList.add("updated");
-  shoppingCartAmount.onanimationend = () => {
-    shoppingCartAmount.classList.remove("updated");
+  /* animatie van het getal dat zichtbaar is */
+  winkelwagenAantal.classList.add("updated");
+  winkelwagenAantal.onanimationend = () => {
+    winkelwagenAantal.classList.remove("updated");
   };
 }
 
 
-// document.addEventListener('keydown', (e) => {
-//   if (e.key === 'Escape') {
-//     const nav = document.querySelector('nav');
-//     if (nav) nav.classList.remove('toonMenu', 'toonMannenSchoenen', 'toonMannenSneakers');
-//   }
-// });
+/************************/
+/* naar kliks luisteren */
+/************************/
 
+
+var hartKnoppen = document.querySelectorAll(
+  "section h2 + ul + ul li > button, section h2 + ul + ul + ul li > button"
+);
+
+for (var i = 0; i < hartKnoppen.length; i++) {
+  // begin-stand van de titel (tooltip)
+  hartKnoppen[i].title = "Toevoegen aan favorieten";
+  hartKnoppen[i].onclick = toevoegenFavoriet;
+}
+
+// Toevoegen en verwijderen uit wishlist
+  function toevoegenFavoriet(event) {
+
+  let gekliktHart = event.target.closest("button");
+  let hetProduct = gekliktHart.closest("li");
+  hetProduct.classList.toggle("liked");
+
+  /* bolletje op de wishlist*/
+  let verlanglijstAantal = document.querySelector("header > ul:first-of-type li:nth-of-type(2) > a > span");
+  let huidigAantal = parseInt(verlanglijstAantal.innerHTML);
+  let nieuwAantal;
+
+  if (hetProduct.classList.contains("liked")) {
+    nieuwAantal = huidigAantal + 1;
+    gekliktHart.title = "Toegevoegd";
+  } else {
+    nieuwAantal = huidigAantal - 1;
+    gekliktHart.title = "Toevoegen aan favorieten";
+  }
+
+  verlanglijstAantal.innerHTML = nieuwAantal;
+
+
+  /******************/
+  /* JOUW CODE HIER */
+  /******************/
+
+  /* nadruk op update van het bolletje: animatie via class 'updated' */
+  verlanglijstAantal.classList.add("updated");
+
+  /* class weer verwijderen met setTimeout (400ms = duur animatie) */
+  setTimeout(function () {
+    verlanglijstAantal.classList.remove("updated");
+  }, 400);
+}
 
 
 
