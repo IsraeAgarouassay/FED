@@ -112,9 +112,8 @@ Tweedecarrousel.classList.add('hidden');
 }
 
 
-/************************/
-/* winkelwagen */
-/************************/
+
+// winkelwagen 
 
 // https://pixabay.com/sound-effects/search/finished/
 const geluidToegevoegd = new Audio('geluid/toegevoegd-geluid.mp3');
@@ -140,7 +139,7 @@ function toevoegenAanWinkelwagen() {
   const geklikteKnop = this;
   geklikteKnop.textContent = "Toevoegen...";
 
-  // Na ~1,1s "Toegevoegd ✔"
+  // Na 1,1s "Toegevoegd ✔"
   setTimeout(() => {
     geklikteKnop.textContent = "Toegevoegd ✔";
   }, 1100);
@@ -153,9 +152,7 @@ function toevoegenAanWinkelwagen() {
 }
 
 
-/************************/
-/* toevoegen aan wishlist */
-/************************/
+// toevoegen aan wishlist 
 
 var hartKnoppen = document.querySelectorAll(
   "section h2 + ul + ul li > button, section h2 + ul + ul + ul li > button"

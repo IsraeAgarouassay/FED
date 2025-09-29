@@ -91,11 +91,11 @@ Lijst met je bevindingen die tijdens WCAG checklist naar voren kwamen:
 - errors: er worden meer dan 100+ errors weergeven in W3C validator. Ook veel info's en warnings.
 
  ### screenshots tijdens de test: 
-  <img src="readme-images/content-globalcode.jpeg" width="375px" alt="ANDERE FOTO">
+  <img src="readme-images/content-global-code.jpeg" width="375px" alt="">
   <img src="readme-images/keyboard-mobiletouch.jpeg" width="375px" alt="">
   <img src="readme-images/heading-list-images.jpeg" width="375px" alt="">
   <img src="readme-images/media-controls.jpeg" width="375px" alt="">
-  <img src="readme-images/appearance-animation-colorcontrast.jpeg" width="375px"alt="ANDERE FOTO">
+  <img src="readme-images/appearance-animation-colorcontrast.jpeg" width="375px"alt="">
 
 </details>
 
@@ -160,7 +160,7 @@ Lijst met je bevindingen die tijdens WCAG checklist naar voren kwamen:
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  hier dit ging goed & dit was lastig 
 
 - Het stylen van de grid elementen en lijstejes ging me goed af met css. Het duurde wel lang en er waren hier en daar moeilijkheden, maar over het algemeen ging het goed.
 
@@ -197,17 +197,39 @@ Lijst met je bevindingen die tijdens WCAG checklist naar voren kwamen:
   ### Bevindingen Screanreader
   Lijst met je bevindingen die tijdens screenreader naar voren kwamen (geef ook aan wat er verbeterd is):
 
-Home pagina
-- 
+Home pagina (wat er beter is):
 
-Product pagina
--
- ### screenshots tijdens de test: 
-  <img src="readme-images" width="375px" alt="">
- 
-  <img src="readme-images" width="375px" alt="">
+- de screenreader zegt “menu openen” en noemt het “hoofdmenu”.
+- knoppen zijn duidelijk benoemd.
+- kopjes worden duidelijk benoemd.
+- de screenreader gaat de elementen op de pagina logisch langs.
+- foto’s zijn duidelijk beschreven, vooral de productfoto’s.
+- svg-knoppen krijgen woorden mee, bijvoorbeeld “zet op verlanglijst”.
+- in de carrousel wordt alleen de belangrijke info benoemd.
+- navigaties worden duidelijk benoemd door aria-labels.
+- er is veel minder onnodige en verwarrende informatie.
 
-  <img src="readme-images" width="375px" alt="">
+punt dat opviel:
+
+- bij de de dropdown benoemt de screenreader de svg op een vreemde manier: “uitgevouwen/samenvouwen 3”
+
+Product pagina (wat er beter is):
+
+- promobalk wordt helemaal benoemd
+- alles uit het hamburgermenu wordt benoemd
+- het product dat wordt getoond is duidelijk beschreven
+- er wordt benoemd wanneer en in welke kleur je de schoen hebt verzonden
+- maten worden goed benoemd
+- winkelwagenknop en het svg-hartje hebben een duidelijke functiebenoeming
+- producten in de carrousel worden goed en duidelijk benoemd
+- de titels worden duidelijk benoemd
+
+punt dat opviel:
+- svg is hier en daar verwarrend in de benoeming
+
+ ### screenshots tijdens de test:  
+  <img src="readme-images/product-foto-productpagina.png" width="375px" alt="kleur van schoen wordt benoemd ook als die verandrd">
+  <img src="readme-images/winkelwagen-wishlist-maten.png" width="375px" alt="deel van productpagina">
 
 ### Bevindingen WCAG checklist
 Lijst met je bevindingen die tijdens WCAG checklist naar voren kwamen:
@@ -222,13 +244,11 @@ wat is verbeterd:
 - basiscode is netjes: lang op html, unieke title per pagina.
 - html is gevalideerd zonder fouten in de w3c validator.
 
-overige bevindingen 
+overige bevindingen: 
 
-- icon-knoppen en icon-links hebben een aria-label.
-- alle navs hebben een aria label.
+- icon-knoppen en icon-links hebben een aria-label gekregen.
+- alle navs hebben een aria label gekregen.
 - p-tags worden overgeslagen als er met de tab overheen wordt gegaan.
-
-
 
 
  ### screenshots tijdens de test: 
@@ -286,19 +306,30 @@ overige bevindingen
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+
+  Hieronder heb ik foto's van de uitkomsten van het toepassen van code van codepen aan mijn site. In de foto's zijn één van leukste en belangerijkste uitkomsten te zien. Ik vind dit de leukste en belangerijkste, omdat het me site meer afmaakt.
+
+  <img src="readme-images/uitkomst-opdracht-carrousel.png" width="375px" alt="uitomst opdracht carrousel">
+  <img src="readme-images/uitkomst-opdracht-css-has.png" width="375px" alt="uitomst opdracht ()has en checked">
+  <img src="readme-images/uitkomst-opdracht-winkelwagen.png" width="375px" alt="uitomst opdracht winkelwagen en wishlist">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  wat goed ging was de surface plane.ik begrijp java script beter dan eerst en heb geleerd hoe animaties werken en vooral surface plane elementen zoals: keyframes, toevoegen aan winkel wagen en ()has. Ook heb ik nieuwe codes geleerd, waarmee ik bijvoorbeeld met esc control dingen kan sluiten.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
+  <img src="readme-images/javascript.png" width="375px" alt="nieuwe javascript code">
+  <img src="readme-images/keyframes.png" width="375px" alt="werking keyframes">
+  <img src="readme-images/()has-surfaceplane.png" width="375px" alt="werking van ()has">
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  wat niet is gelukt en wat ik heel lastig vond was in de hamburgermenu bij de submen's een terug knop te plaatsen met breadcrumbvan waar de gebruiker zich bevindt. Ik heb veel uitgeprobeerd maar ben er niet helemaal uit gekomen
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  ### hoe het eruit ziet bij mij:
+  <img src="readme-images/breadcrumbs-terugknop.png" width="375px" alt="hamburgermenu">
+
+  ### hoe het eruit moest zien:
+  <img src="readme-images/goede-breadcrumbs-hamburgermenu.png" width="375px" alt="juiste hamburgermenu">
 </details>
 
 
