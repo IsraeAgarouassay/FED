@@ -86,16 +86,16 @@ Lijst met je bevindingen die tijdens WCAG checklist naar voren kwamen:
 
 - Afbeeldingen: alt ontbreekt of is onjuist en decoratieve beelden hebben geen alt=".  Productafbeeldingen hebben geen beschrijvende alt (naam/kleur/model).
 - Toetsenbord: focusvolgorde komt niet overeen met de visuele volgorde.
-- Lijsten: visueel als lijst, maar niet semantisch weergeven met <ul>/<ol>/<dl>.
+- Lijsten: visueel als lijst, maar niet semantisch weergeven met ul,ol,li.
 - Headings: onduidelijke koppen-structuur.
 - errors: er worden meer dan 100+ errors weergeven in W3C validator. Ook veel info's en warnings.
 
  ### screenshots tijdens de test: 
-  <img src="readme-images/content-globalcode.jpeg" width="375px" alt="">
+  <img src="readme-images/content-globalcode.jpeg" width="375px" alt="ANDERE FOTO">
   <img src="readme-images/keyboard-mobiletouch.jpeg" width="375px" alt="">
   <img src="readme-images/heading-list-images.jpeg" width="375px" alt="">
   <img src="readme-images/media-controls.jpeg" width="375px" alt="">
-  <img src="readme-images/appearance-animation-colorcontrast.jpeg" width="375px"alt="">
+  <img src="readme-images/appearance-animation-colorcontrast.jpeg" width="375px"alt="ANDERE FOTO">
 
 </details>
 
@@ -196,7 +196,6 @@ Lijst met je bevindingen die tijdens WCAG checklist naar voren kwamen:
 
   ### Bevindingen Screanreader
   Lijst met je bevindingen die tijdens screenreader naar voren kwamen (geef ook aan wat er verbeterd is):
-:
 
 Home pagina
 - 
