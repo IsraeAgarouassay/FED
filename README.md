@@ -258,6 +258,8 @@ Product pagina
 
   1. https://css-tricks.com/almanac/properties/t/text-indent/
   2. https://css-tricks.com/almanac/properties/w/whitespace/
-  3. ...
+  3. (https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+  4. https://javascriptf1.com/snippet/detect-escape-key-press-in-javascript
+  5. https://pixabay.com/sound-effects/search/finished/
 
 </details>

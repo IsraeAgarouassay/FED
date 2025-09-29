@@ -12,7 +12,6 @@ function openMenu() {
 }
 
 /* menu sluiten met de sluit button */
-
 const sluitButton = document.querySelector("nav > button");
 
 
@@ -62,7 +61,6 @@ function terugNaarHoofdMenu() {
   deNav.classList.remove("toonMannenSneakers");
 }
 
-
 // https://javascriptf1.com/snippet/detect-escape-key-press-in-javascript
 document.addEventListener('keydown', evt => {
   // checkt of de ingedrukte toets de Escape-toets is
@@ -71,6 +69,7 @@ document.addEventListener('keydown', evt => {
     if (nav) nav.classList.remove('toonMenu', 'toonMannenSchoenen', 'toonMannenSneakers');
     }
 });
+
 
 // DETAILPAGINA - kleur schoen veranderen
 
@@ -111,41 +110,6 @@ ZilvereSchoen.addEventListener('click', toonEersteCarrousel);
 Eerstecarrousel.classList.remove('hidden');
 Tweedecarrousel.classList.add('hidden');
 }
-
-
-// HOMEPAGINA - Productlijst zichtbaar maken en onzichtbaar
-
-
-// productlijsten
-const productLijst1 = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(2)');
-const productLijst2 = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(3)');
-
-
-// knoppen boven productlijst
-const knopExclusieveLeden = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(1) li:nth-of-type(1) > button');
-const knopNieuweProducten = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(1) li:nth-of-type(2) > button');
-
-
-if (productLijst1 && productLijst2 && knopExclusieveLeden && knopNieuweProducten) {
-function toonProductLijst1() {
-  productLijst2.classList.add('hidden');
-  productLijst1.classList.remove('hidden');
-}
-
-function toonProductLijst2() {
-  productLijst1.classList.add('hidden');
-  productLijst2.classList.remove('hidden');
-}
-
-knopExclusieveLeden.addEventListener('click', toonProductLijst1);
-knopNieuweProducten.addEventListener('click', toonProductLijst2);
-
-// starttoestand: 1e zichtbaar, 2e verborgen
-productLijst1.classList.remove('hidden');
-productLijst2.classList.add('hidden');
-}
-
-
 
 
 /************************/
@@ -190,9 +154,8 @@ function toevoegenAanWinkelwagen() {
 
 
 /************************/
-/* naar kliks luisteren */
+/* toevoegen aan wishlist */
 /************************/
-
 
 var hartKnoppen = document.querySelectorAll(
   "section h2 + ul + ul li > button, section h2 + ul + ul + ul li > button"
@@ -225,20 +188,42 @@ for (var i = 0; i < hartKnoppen.length; i++) {
   }
 
   verlanglijstAantal.innerHTML = nieuwAantal;
-
-
-  /******************/
-  /* JOUW CODE HIER */
-  /******************/
-
-  /* nadruk op update van het bolletje: animatie via class 'updated' */
   verlanglijstAantal.classList.add("updated");
 
-  /* class weer verwijderen met setTimeout (400ms = duur animatie) */
   setTimeout(function () {
     verlanglijstAantal.classList.remove("updated");
   }, 400);
 }
 
+// HOMEPAGINA - Productlijst zichtbaar maken en onzichtbaar
+
+// productlijsten
+const productLijst1 = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(2)');
+const productLijst2 = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(3)');
+
+
+// knoppen boven productlijst
+const knopExclusieveLeden = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(1) li:nth-of-type(1) > button');
+const knopNieuweProducten = document.querySelector('main section:nth-of-type(5) > ul:nth-of-type(1) li:nth-of-type(2) > button');
+
+
+if (productLijst1 && productLijst2 && knopExclusieveLeden && knopNieuweProducten) {
+function toonProductLijst1() {
+  productLijst2.classList.add('hidden');
+  productLijst1.classList.remove('hidden');
+}
+
+function toonProductLijst2() {
+  productLijst1.classList.add('hidden');
+  productLijst2.classList.remove('hidden');
+}
+
+knopExclusieveLeden.addEventListener('click', toonProductLijst1);
+knopNieuweProducten.addEventListener('click', toonProductLijst2);
+
+// starttoestand: 1e zichtbaar, 2e verborgen
+productLijst1.classList.remove('hidden');
+productLijst2.classList.add('hidden');
+}
 
 
